@@ -7,35 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F48A670A17F377C100E5C76F /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670417F377C100E5C76F /* libzbar.a */; };
-		F48A670B17F377C100E5C76F /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670617F377C100E5C76F /* zbar-back.png */; };
-		F48A670C17F377C100E5C76F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = F48A670717F377C100E5C76F /* zbar-help.html */; };
-		F48A670D17F377C100E5C76F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670817F377C100E5C76F /* zbar-helpicons.png */; };
-		F48A670E17F377C100E5C76F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670917F377C100E5C76F /* zbar-samples.png */; };
+		CA2772C217F9AC0E0021E507 /* KCKittyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2772C117F9AC0E0021E507 /* KCKittyManager.m */; };
+		CAA5E59C17F9D18D0071D08B /* KCKittyUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */; };
 		F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670F17F377ED00E5C76F /* AVFoundation.framework */; };
 		F48A671217F377F600E5C76F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671117F377F600E5C76F /* CoreMedia.framework */; };
 		F48A671417F377FE00E5C76F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671317F377FE00E5C76F /* CoreVideo.framework */; };
 		F48A671617F3780600E5C76F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671517F3780600E5C76F /* QuartzCore.framework */; };
 		F48A671817F3781400E5C76F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671717F3781300E5C76F /* libiconv.dylib */; };
-		F48A671E17F389C300E5C76F /* AddKittyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A671D17F389C300E5C76F /* AddKittyViewController.m */; };
+		F48A671E17F389C300E5C76F /* KCAddKittyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A671D17F389C300E5C76F /* KCAddKittyViewController.m */; };
 		F494D1DF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
 		F494D1E117F3692700B7F1CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E017F3692700B7F1CA /* CoreGraphics.framework */; };
 		F494D1E317F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
 		F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D1E717F3692700B7F1CA /* InfoPlist.strings */; };
 		F494D1EB17F3692700B7F1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EA17F3692700B7F1CA /* main.m */; };
-		F494D1EF17F3692700B7F1CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EE17F3692700B7F1CA /* AppDelegate.m */; };
+		F494D1EF17F3692700B7F1CA /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */; };
 		F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F017F3692700B7F1CA /* Main.storyboard */; };
-		F494D1F517F3692700B7F1CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1F417F3692700B7F1CA /* ViewController.m */; };
+		F494D1F517F3692700B7F1CA /* KCScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1F417F3692700B7F1CA /* KCScanViewController.m */; };
 		F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F617F3692700B7F1CA /* Images.xcassets */; };
 		F494D1FE17F3692700B7F1CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1FD17F3692700B7F1CA /* XCTest.framework */; };
 		F494D1FF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
 		F494D20017F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
 		F494D20817F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D20617F3692700B7F1CA /* InfoPlist.strings */; };
 		F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D20917F3692700B7F1CA /* KittyClientTests.m */; };
-		F4A0CCDD17F5D1B000E8FB53 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */; };
+		F4A0CCDD17F5D1B000E8FB53 /* KCKittyUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */; };
 		F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4A0CCED17F60CC600E8FB53 /* Kittys.plist */; };
-		F4A0CCF417F6252700E8FB53 /* DrinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */; };
-		F4A0CCF717F6258C00E8FB53 /* DrinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */; };
+		F4A0CCF417F6252700E8FB53 /* KCKittyDrinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */; };
+		F4A0CCF717F6258C00E8FB53 /* KCKittyDrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF617F6258C00E8FB53 /* KCKittyDrinkCell.m */; };
 		F4B7214D17F4CD99008C9E36 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213B17F4CD99008C9E36 /* AFHTTPRequestOperation.m */; };
 		F4B7214E17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213D17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m */; };
 		F4B7214F17F4CD99008C9E36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213F17F4CD99008C9E36 /* AFHTTPSessionManager.m */; };
@@ -45,7 +42,7 @@
 		F4B7215317F4CD99008C9E36 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214817F4CD99008C9E36 /* AFURLRequestSerialization.m */; };
 		F4B7215417F4CD99008C9E36 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214A17F4CD99008C9E36 /* AFURLResponseSerialization.m */; };
 		F4B7215517F4CD99008C9E36 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214C17F4CD99008C9E36 /* AFURLSessionManager.m */; };
-		F4B7215817F4E0D8008C9E36 /* KittyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */; };
+		F4B7215817F4E0D8008C9E36 /* KCKittyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7215717F4E0D8008C9E36 /* KCKittyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,38 +56,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F48A66F017F377C100E5C76F /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
-		F48A66F117F377C100E5C76F /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
-		F48A66F217F377C100E5C76F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
-		F48A66F317F377C100E5C76F /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
-		F48A66F417F377C100E5C76F /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
-		F48A66F517F377C100E5C76F /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
-		F48A66F617F377C100E5C76F /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
-		F48A66F717F377C100E5C76F /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
-		F48A66F817F377C100E5C76F /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
-		F48A66F917F377C100E5C76F /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
-		F48A66FA17F377C100E5C76F /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
-		F48A66FB17F377C100E5C76F /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
-		F48A66FC17F377C100E5C76F /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
-		F48A66FD17F377C100E5C76F /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
-		F48A66FE17F377C100E5C76F /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
-		F48A66FF17F377C100E5C76F /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
-		F48A670017F377C100E5C76F /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
-		F48A670117F377C100E5C76F /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
-		F48A670217F377C100E5C76F /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
-		F48A670317F377C100E5C76F /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
-		F48A670417F377C100E5C76F /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
-		F48A670617F377C100E5C76F /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
-		F48A670717F377C100E5C76F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
-		F48A670817F377C100E5C76F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
-		F48A670917F377C100E5C76F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		CA2772C017F9AC0E0021E507 /* KCKittyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyManager.h; sourceTree = "<group>"; };
+		CA2772C117F9AC0E0021E507 /* KCKittyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyManager.m; sourceTree = "<group>"; };
+		CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserCell.h; sourceTree = "<group>"; };
+		CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserCell.m; sourceTree = "<group>"; };
 		F48A670F17F377ED00E5C76F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F48A671117F377F600E5C76F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F48A671317F377FE00E5C76F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F48A671517F3780600E5C76F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F48A671717F3781300E5C76F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		F48A671C17F389C300E5C76F /* AddKittyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddKittyViewController.h; sourceTree = "<group>"; };
-		F48A671D17F389C300E5C76F /* AddKittyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddKittyViewController.m; sourceTree = "<group>"; };
+		F48A671C17F389C300E5C76F /* KCAddKittyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAddKittyViewController.h; sourceTree = "<group>"; };
+		F48A671D17F389C300E5C76F /* KCAddKittyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAddKittyViewController.m; sourceTree = "<group>"; };
 		F494D1DB17F3692700B7F1CA /* KittyClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494D1DE17F3692700B7F1CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F494D1E017F3692700B7F1CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,24 +75,24 @@
 		F494D1E817F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F494D1EA17F3692700B7F1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F494D1EC17F3692700B7F1CA /* KittyClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KittyClient-Prefix.pch"; sourceTree = "<group>"; };
-		F494D1ED17F3692700B7F1CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F494D1EE17F3692700B7F1CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F494D1ED17F3692700B7F1CA /* KCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
+		F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; };
 		F494D1F117F3692700B7F1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F494D1F317F3692700B7F1CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F494D1F417F3692700B7F1CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F494D1F317F3692700B7F1CA /* KCScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCScanViewController.h; sourceTree = "<group>"; };
+		F494D1F417F3692700B7F1CA /* KCScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCScanViewController.m; sourceTree = "<group>"; };
 		F494D1F617F3692700B7F1CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittyClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494D1FD17F3692700B7F1CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClientTests-Info.plist"; sourceTree = "<group>"; };
 		F494D20717F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F494D20917F3692700B7F1CA /* KittyClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KittyClientTests.m; sourceTree = "<group>"; };
-		F4A0CCDB17F5D1B000E8FB53 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
-		F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		F4A0CCDB17F5D1B000E8FB53 /* KCKittyUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserTableViewController.h; sourceTree = "<group>"; };
+		F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserTableViewController.m; sourceTree = "<group>"; };
 		F4A0CCED17F60CC600E8FB53 /* Kittys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kittys.plist; sourceTree = "<group>"; };
-		F4A0CCF217F6252700E8FB53 /* DrinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewController.h; sourceTree = "<group>"; };
-		F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewController.m; sourceTree = "<group>"; };
-		F4A0CCF517F6258C00E8FB53 /* DrinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewCell.h; sourceTree = "<group>"; };
-		F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewCell.m; sourceTree = "<group>"; };
+		F4A0CCF217F6252700E8FB53 /* KCKittyDrinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyDrinkTableViewController.h; sourceTree = "<group>"; };
+		F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyDrinkTableViewController.m; sourceTree = "<group>"; };
+		F4A0CCF517F6258C00E8FB53 /* KCKittyDrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyDrinkCell.h; sourceTree = "<group>"; };
+		F4A0CCF617F6258C00E8FB53 /* KCKittyDrinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyDrinkCell.m; sourceTree = "<group>"; };
 		F4B7213A17F4CD99008C9E36 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		F4B7213B17F4CD99008C9E36 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		F4B7213C17F4CD99008C9E36 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -136,8 +112,8 @@
 		F4B7214A17F4CD99008C9E36 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F4B7214B17F4CD99008C9E36 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F4B7214C17F4CD99008C9E36 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		F4B7215617F4E0D8008C9E36 /* KittyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KittyTableViewController.h; sourceTree = "<group>"; };
-		F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KittyTableViewController.m; sourceTree = "<group>"; };
+		F4B7215617F4E0D8008C9E36 /* KCKittyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyTableViewController.h; sourceTree = "<group>"; };
+		F4B7215717F4E0D8008C9E36 /* KCKittyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +128,6 @@
 				F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */,
 				F494D1E117F3692700B7F1CA /* CoreGraphics.framework in Frameworks */,
 				F494D1E317F3692700B7F1CA /* UIKit.framework in Frameworks */,
-				F48A670A17F377C100E5C76F /* libzbar.a in Frameworks */,
 				F494D1DF17F3692700B7F1CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,68 +145,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F48A66EC17F377C100E5C76F /* ZBarSDK */ = {
+		CA2772BD17F9AABF0021E507 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F48A66ED17F377C100E5C76F /* Headers */,
-				F48A670417F377C100E5C76F /* libzbar.a */,
-				F48A670517F377C100E5C76F /* Resources */,
+				F494D1F317F3692700B7F1CA /* KCScanViewController.h */,
+				F494D1F417F3692700B7F1CA /* KCScanViewController.m */,
 			);
-			path = ZBarSDK;
+			name = Main;
 			sourceTree = "<group>";
 		};
-		F48A66ED17F377C100E5C76F /* Headers */ = {
+		CA2772BE17F9AAC30021E507 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F48A66EE17F377C100E5C76F /* ZBarSDK */,
+				F4B7215617F4E0D8008C9E36 /* KCKittyTableViewController.h */,
+				F4B7215717F4E0D8008C9E36 /* KCKittyTableViewController.m */,
+				F48A671C17F389C300E5C76F /* KCAddKittyViewController.h */,
+				F48A671D17F389C300E5C76F /* KCAddKittyViewController.m */,
+				F4A0CCDB17F5D1B000E8FB53 /* KCKittyUserTableViewController.h */,
+				F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */,
+				F4A0CCF217F6252700E8FB53 /* KCKittyDrinkTableViewController.h */,
+				F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */,
+				CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */,
+				CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */,
+				F4A0CCF517F6258C00E8FB53 /* KCKittyDrinkCell.h */,
+				F4A0CCF617F6258C00E8FB53 /* KCKittyDrinkCell.m */,
 			);
-			path = Headers;
+			name = Settings;
 			sourceTree = "<group>";
 		};
-		F48A66EE17F377C100E5C76F /* ZBarSDK */ = {
+		CA2772BF17F9ABFF0021E507 /* Datamodel */ = {
 			isa = PBXGroup;
 			children = (
-				F48A66EF17F377C100E5C76F /* zbar */,
-				F48A66F917F377C100E5C76F /* zbar.h */,
-				F48A66FA17F377C100E5C76F /* ZBarCameraSimulator.h */,
-				F48A66FB17F377C100E5C76F /* ZBarCaptureReader.h */,
-				F48A66FC17F377C100E5C76F /* ZBarHelpController.h */,
-				F48A66FD17F377C100E5C76F /* ZBarImage.h */,
-				F48A66FE17F377C100E5C76F /* ZBarImageScanner.h */,
-				F48A66FF17F377C100E5C76F /* ZBarReaderController.h */,
-				F48A670017F377C100E5C76F /* ZBarReaderView.h */,
-				F48A670117F377C100E5C76F /* ZBarReaderViewController.h */,
-				F48A670217F377C100E5C76F /* ZBarSDK.h */,
-				F48A670317F377C100E5C76F /* ZBarSymbol.h */,
+				CA2772C017F9AC0E0021E507 /* KCKittyManager.h */,
+				CA2772C117F9AC0E0021E507 /* KCKittyManager.m */,
 			);
-			path = ZBarSDK;
-			sourceTree = "<group>";
-		};
-		F48A66EF17F377C100E5C76F /* zbar */ = {
-			isa = PBXGroup;
-			children = (
-				F48A66F017F377C100E5C76F /* Decoder.h */,
-				F48A66F117F377C100E5C76F /* Exception.h */,
-				F48A66F217F377C100E5C76F /* Image.h */,
-				F48A66F317F377C100E5C76F /* ImageScanner.h */,
-				F48A66F417F377C100E5C76F /* Processor.h */,
-				F48A66F517F377C100E5C76F /* Scanner.h */,
-				F48A66F617F377C100E5C76F /* Symbol.h */,
-				F48A66F717F377C100E5C76F /* Video.h */,
-				F48A66F817F377C100E5C76F /* Window.h */,
-			);
-			path = zbar;
-			sourceTree = "<group>";
-		};
-		F48A670517F377C100E5C76F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F48A670617F377C100E5C76F /* zbar-back.png */,
-				F48A670717F377C100E5C76F /* zbar-help.html */,
-				F48A670817F377C100E5C76F /* zbar-helpicons.png */,
-				F48A670917F377C100E5C76F /* zbar-samples.png */,
-			);
-			path = Resources;
+			name = Datamodel;
 			sourceTree = "<group>";
 		};
 		F494D1D217F3692700B7F1CA = {
@@ -262,7 +210,6 @@
 				F48A671317F377FE00E5C76F /* CoreVideo.framework */,
 				F48A671117F377F600E5C76F /* CoreMedia.framework */,
 				F48A670F17F377ED00E5C76F /* AVFoundation.framework */,
-				F48A66EC17F377C100E5C76F /* ZBarSDK */,
 				F494D1DE17F3692700B7F1CA /* Foundation.framework */,
 				F494D1E017F3692700B7F1CA /* CoreGraphics.framework */,
 				F494D1E217F3692700B7F1CA /* UIKit.framework */,
@@ -274,14 +221,12 @@
 		F494D1E417F3692700B7F1CA /* KittyClient */ = {
 			isa = PBXGroup;
 			children = (
-				F4A0CCF117F6250700E8FB53 /* DrinkSelection */,
-				F4A0CCF017F624FB00E8FB53 /* UserSelection */,
-				F4A0CCEF17F624EE00E8FB53 /* KittySelection */,
-				F494D1ED17F3692700B7F1CA /* AppDelegate.h */,
-				F494D1EE17F3692700B7F1CA /* AppDelegate.m */,
+				CA2772BD17F9AABF0021E507 /* Main */,
+				CA2772BE17F9AAC30021E507 /* Settings */,
+				CA2772BF17F9ABFF0021E507 /* Datamodel */,
 				F494D1F017F3692700B7F1CA /* Main.storyboard */,
-				F494D1F317F3692700B7F1CA /* ViewController.h */,
-				F494D1F417F3692700B7F1CA /* ViewController.m */,
+				F494D1ED17F3692700B7F1CA /* KCAppDelegate.h */,
+				F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */,
 				F494D1F617F3692700B7F1CA /* Images.xcassets */,
 				F494D1E517F3692700B7F1CA /* Supporting Files */,
 			);
@@ -316,37 +261,6 @@
 				F494D20617F3692700B7F1CA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F4A0CCEF17F624EE00E8FB53 /* KittySelection */ = {
-			isa = PBXGroup;
-			children = (
-				F48A671C17F389C300E5C76F /* AddKittyViewController.h */,
-				F48A671D17F389C300E5C76F /* AddKittyViewController.m */,
-				F4B7215617F4E0D8008C9E36 /* KittyTableViewController.h */,
-				F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */,
-			);
-			name = KittySelection;
-			sourceTree = "<group>";
-		};
-		F4A0CCF017F624FB00E8FB53 /* UserSelection */ = {
-			isa = PBXGroup;
-			children = (
-				F4A0CCDB17F5D1B000E8FB53 /* UserTableViewController.h */,
-				F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */,
-			);
-			name = UserSelection;
-			sourceTree = "<group>";
-		};
-		F4A0CCF117F6250700E8FB53 /* DrinkSelection */ = {
-			isa = PBXGroup;
-			children = (
-				F4A0CCF217F6252700E8FB53 /* DrinkTableViewController.h */,
-				F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */,
-				F4A0CCF517F6258C00E8FB53 /* DrinkTableViewCell.h */,
-				F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */,
-			);
-			name = DrinkSelection;
 			sourceTree = "<group>";
 		};
 		F4B7213917F4CD99008C9E36 /* AFNetworking */ = {
@@ -419,6 +333,7 @@
 		F494D1D317F3692700B7F1CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KC;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Simon Jakubowski";
 				TargetAttributes = {
@@ -452,10 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */,
-				F48A670C17F377C100E5C76F /* zbar-help.html in Resources */,
-				F48A670E17F377C100E5C76F /* zbar-samples.png in Resources */,
-				F48A670D17F377C100E5C76F /* zbar-helpicons.png in Resources */,
-				F48A670B17F377C100E5C76F /* zbar-back.png in Resources */,
 				F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */,
 				F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */,
 				F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */,
@@ -477,23 +388,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48A671E17F389C300E5C76F /* AddKittyViewController.m in Sources */,
-				F4A0CCF717F6258C00E8FB53 /* DrinkTableViewCell.m in Sources */,
-				F4B7215817F4E0D8008C9E36 /* KittyTableViewController.m in Sources */,
+				F48A671E17F389C300E5C76F /* KCAddKittyViewController.m in Sources */,
+				CAA5E59C17F9D18D0071D08B /* KCKittyUserCell.m in Sources */,
+				F4A0CCF717F6258C00E8FB53 /* KCKittyDrinkCell.m in Sources */,
+				F4B7215817F4E0D8008C9E36 /* KCKittyTableViewController.m in Sources */,
 				F4B7215117F4CD99008C9E36 /* AFSecurityPolicy.m in Sources */,
-				F494D1F517F3692700B7F1CA /* ViewController.m in Sources */,
-				F4A0CCF417F6252700E8FB53 /* DrinkTableViewController.m in Sources */,
+				F494D1F517F3692700B7F1CA /* KCScanViewController.m in Sources */,
+				F4A0CCF417F6252700E8FB53 /* KCKittyDrinkTableViewController.m in Sources */,
 				F4B7214E17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m in Sources */,
 				F4B7215217F4CD99008C9E36 /* AFURLConnectionOperation.m in Sources */,
 				F4B7214D17F4CD99008C9E36 /* AFHTTPRequestOperation.m in Sources */,
-				F494D1EF17F3692700B7F1CA /* AppDelegate.m in Sources */,
+				F494D1EF17F3692700B7F1CA /* KCAppDelegate.m in Sources */,
 				F4B7215317F4CD99008C9E36 /* AFURLRequestSerialization.m in Sources */,
-				F4A0CCDD17F5D1B000E8FB53 /* UserTableViewController.m in Sources */,
+				F4A0CCDD17F5D1B000E8FB53 /* KCKittyUserTableViewController.m in Sources */,
 				F4B7214F17F4CD99008C9E36 /* AFHTTPSessionManager.m in Sources */,
 				F4B7215017F4CD99008C9E36 /* AFNetworkReachabilityManager.m in Sources */,
 				F4B7215417F4CD99008C9E36 /* AFURLResponseSerialization.m in Sources */,
 				F4B7215517F4CD99008C9E36 /* AFURLSessionManager.m in Sources */,
 				F494D1EB17F3692700B7F1CA /* main.m in Sources */,
+				CA2772C217F9AC0E0021E507 /* KCKittyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,10 +536,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
 				INFOPLIST_FILE = "KittyClient/KittyClient-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Simon/Projects/KittyClient/ZBarSDK,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -640,10 +550,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
 				INFOPLIST_FILE = "KittyClient/KittyClient-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Simon/Projects/KittyClient/ZBarSDK,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserTableViewController : UITableViewController
+@interface KCKittyUserTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSDictionary *aKitty;
-@property (nonatomic, strong) NSMutableArray *users;
+@property (nonatomic, assign) NSInteger selectedKittyIndex;
 
 @end

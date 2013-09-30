@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KittyTableViewController : UITableViewController
+@interface KCKittyTableViewController : UITableViewController
 
 @end

@@ -15,8 +15,4 @@
     #import <Foundation/Foundation.h>
 #endif
 
-// ADD: import barcode reader APIs
-#import "ZBarSDK.h"
-
-// set base API URL
 #define BASE_API_URL @"http://kitty.pygroup.de/api/%@/%@/"

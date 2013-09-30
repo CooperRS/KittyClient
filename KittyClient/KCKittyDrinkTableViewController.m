@@ -6,77 +6,76 @@
 //  Copyright (c) 2013 Simon Jakubowski. All rights reserved.
 //
 
-#import "DrinkTableViewController.h"
-#import "AFHTTPRequestOperation.h"
-#import "DrinkTableViewCell.h"
+#import "KCKittyDrinkTableViewController.h"
 
-@interface DrinkTableViewController () <DrinkTableViewCellDelegate>
+#import "KCKittyDrinkCell.h"
+
+#import "KCKittyManager.h"
+#import "AFHTTPRequestOperation.h"
+
+@interface KCKittyDrinkTableViewController () <KCKittyDrinkCellDelegate>
+
+@property (nonatomic, strong) NSDictionary *kitty;
+@property (nonatomic, strong) NSMutableArray *drinks;
 
 @end
 
-@implementation DrinkTableViewController
+@implementation KCKittyDrinkTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     self.drinks = [NSMutableArray array];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.aUser objectForKey:@"name"], [self.aUser objectForKey:@"money"]];
-    [self loadDrinks];
-}
-
-- (void) loadDrinks
-{
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [self.aUser objectForKey:@"userId"]]];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.user objectForKey:@"name"], [self.user objectForKey:@"money"]];
+    
+#warning MBProgressHUD here!
+    
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [self.user objectForKey:@"userId"]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        for (NSDictionary* jsonDrinks in responseObject) {
-            [self.drinks addObject:jsonDrinks];
+        //NSLog(@"JSON: %@", responseObject);
+        
+        NSMutableArray *newDrinks = [NSMutableArray array];
+        for (NSDictionary *aDrink in responseObject) {
+            [newDrinks addObject:aDrink];
         }
+        
+        self.drinks = newDrinks;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                           message:@"Wrong Kitty ID?"
-                                                          delegate:self
-                                                 cancelButtonTitle:@"OK"
-                                                 otherButtonTitles:nil];
+        
+#warning Rework error messages
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Properties
+- (NSDictionary *)kitty {
+    return [[KCKittyManager sharedKittyManager] kittyAtIndex:self.selectedKittyIndex];
 }
 
-#pragma mark - Table view data source
+- (NSMutableArray *)drinks {
+    if(!_drinks) {
+        self.drinks = [NSMutableArray array];
+    }
+    
+    return _drinks;
+}
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+#pragma mark - UITableView Delegates
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.drinks count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"DefaultCell";
-    DrinkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+static NSString *CellIdentifier = @"DrinkCell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    KCKittyDrinkCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSDictionary* aDrink = [self.drinks objectAtIndex:indexPath.row];
     cell.itemName.text = [aDrink objectForKey:@"itemName"];
@@ -90,7 +89,7 @@
 
 #pragma mark delegates
 - (void)changeItemCountForCell:(id)cell {
-    DrinkTableViewCell *aCell = cell;
+    KCKittyDrinkCell *aCell = cell;
     
     NSURL *URL;
     if (aCell.stepper.value == 2)
@@ -106,20 +105,19 @@
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+        
         aCell.itemCount.text = [[responseObject objectForKey:@"itemCount"] stringValue];
         aCell.stepper.value = 1;
-        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.aUser objectForKey:@"name"], [responseObject objectForKey:@"userMoney"]];
+        
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.user objectForKey:@"name"], [responseObject objectForKey:@"userMoney"]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                           message:@"Wrong Kitty ID?"
-                                                          delegate:self
-                                                 cancelButtonTitle:@"OK"
-                                                 otherButtonTitles:nil];
+        
+#warning Rework error messages
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"  message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
-    
 }
 
 @end
