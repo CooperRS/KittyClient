@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F48A670A17F377C100E5C76F /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670417F377C100E5C76F /* libzbar.a */; };
+		F48A670B17F377C100E5C76F /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670617F377C100E5C76F /* zbar-back.png */; };
+		F48A670C17F377C100E5C76F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = F48A670717F377C100E5C76F /* zbar-help.html */; };
+		F48A670D17F377C100E5C76F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670817F377C100E5C76F /* zbar-helpicons.png */; };
+		F48A670E17F377C100E5C76F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = F48A670917F377C100E5C76F /* zbar-samples.png */; };
+		F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670F17F377ED00E5C76F /* AVFoundation.framework */; };
+		F48A671217F377F600E5C76F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671117F377F600E5C76F /* CoreMedia.framework */; };
+		F48A671417F377FE00E5C76F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671317F377FE00E5C76F /* CoreVideo.framework */; };
+		F48A671617F3780600E5C76F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671517F3780600E5C76F /* QuartzCore.framework */; };
+		F48A671817F3781400E5C76F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671717F3781300E5C76F /* libiconv.dylib */; };
+		F48A671E17F389C300E5C76F /* AddKittyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A671D17F389C300E5C76F /* AddKittyViewController.m */; };
+		F494D1DF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
+		F494D1E117F3692700B7F1CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E017F3692700B7F1CA /* CoreGraphics.framework */; };
+		F494D1E317F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
+		F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D1E717F3692700B7F1CA /* InfoPlist.strings */; };
+		F494D1EB17F3692700B7F1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EA17F3692700B7F1CA /* main.m */; };
+		F494D1EF17F3692700B7F1CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EE17F3692700B7F1CA /* AppDelegate.m */; };
+		F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F017F3692700B7F1CA /* Main.storyboard */; };
+		F494D1F517F3692700B7F1CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1F417F3692700B7F1CA /* ViewController.m */; };
+		F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F617F3692700B7F1CA /* Images.xcassets */; };
+		F494D1FE17F3692700B7F1CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1FD17F3692700B7F1CA /* XCTest.framework */; };
+		F494D1FF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
+		F494D20017F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
+		F494D20817F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D20617F3692700B7F1CA /* InfoPlist.strings */; };
+		F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D20917F3692700B7F1CA /* KittyClientTests.m */; };
+		F4A0CCDD17F5D1B000E8FB53 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */; };
+		F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4A0CCED17F60CC600E8FB53 /* Kittys.plist */; };
+		F4A0CCF417F6252700E8FB53 /* DrinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */; };
+		F4A0CCF717F6258C00E8FB53 /* DrinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */; };
+		F4B7214D17F4CD99008C9E36 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213B17F4CD99008C9E36 /* AFHTTPRequestOperation.m */; };
+		F4B7214E17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213D17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m */; };
+		F4B7214F17F4CD99008C9E36 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7213F17F4CD99008C9E36 /* AFHTTPSessionManager.m */; };
+		F4B7215017F4CD99008C9E36 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214217F4CD99008C9E36 /* AFNetworkReachabilityManager.m */; };
+		F4B7215117F4CD99008C9E36 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214417F4CD99008C9E36 /* AFSecurityPolicy.m */; };
+		F4B7215217F4CD99008C9E36 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214617F4CD99008C9E36 /* AFURLConnectionOperation.m */; };
+		F4B7215317F4CD99008C9E36 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214817F4CD99008C9E36 /* AFURLRequestSerialization.m */; };
+		F4B7215417F4CD99008C9E36 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214A17F4CD99008C9E36 /* AFURLResponseSerialization.m */; };
+		F4B7215517F4CD99008C9E36 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7214C17F4CD99008C9E36 /* AFURLSessionManager.m */; };
+		F4B7215817F4E0D8008C9E36 /* KittyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F494D20117F3692700B7F1CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F494D1D317F3692700B7F1CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F494D1DA17F3692700B7F1CA;
+			remoteInfo = KittyClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F48A66F017F377C100E5C76F /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		F48A66F117F377C100E5C76F /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		F48A66F217F377C100E5C76F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		F48A66F317F377C100E5C76F /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		F48A66F417F377C100E5C76F /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		F48A66F517F377C100E5C76F /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		F48A66F617F377C100E5C76F /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		F48A66F717F377C100E5C76F /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		F48A66F817F377C100E5C76F /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		F48A66F917F377C100E5C76F /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		F48A66FA17F377C100E5C76F /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		F48A66FB17F377C100E5C76F /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		F48A66FC17F377C100E5C76F /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		F48A66FD17F377C100E5C76F /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		F48A66FE17F377C100E5C76F /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		F48A66FF17F377C100E5C76F /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		F48A670017F377C100E5C76F /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		F48A670117F377C100E5C76F /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		F48A670217F377C100E5C76F /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		F48A670317F377C100E5C76F /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		F48A670417F377C100E5C76F /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		F48A670617F377C100E5C76F /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		F48A670717F377C100E5C76F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		F48A670817F377C100E5C76F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		F48A670917F377C100E5C76F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		F48A670F17F377ED00E5C76F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F48A671117F377F600E5C76F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F48A671317F377FE00E5C76F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F48A671517F3780600E5C76F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F48A671717F3781300E5C76F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F48A671C17F389C300E5C76F /* AddKittyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddKittyViewController.h; sourceTree = "<group>"; };
+		F48A671D17F389C300E5C76F /* AddKittyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddKittyViewController.m; sourceTree = "<group>"; };
+		F494D1DB17F3692700B7F1CA /* KittyClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F494D1DE17F3692700B7F1CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F494D1E017F3692700B7F1CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F494D1E217F3692700B7F1CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F494D1E617F3692700B7F1CA /* KittyClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClient-Info.plist"; sourceTree = "<group>"; };
+		F494D1E817F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F494D1EA17F3692700B7F1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F494D1EC17F3692700B7F1CA /* KittyClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KittyClient-Prefix.pch"; sourceTree = "<group>"; };
+		F494D1ED17F3692700B7F1CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F494D1EE17F3692700B7F1CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F494D1F117F3692700B7F1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F494D1F317F3692700B7F1CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F494D1F417F3692700B7F1CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F494D1F617F3692700B7F1CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittyClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F494D1FD17F3692700B7F1CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClientTests-Info.plist"; sourceTree = "<group>"; };
+		F494D20717F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F494D20917F3692700B7F1CA /* KittyClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KittyClientTests.m; sourceTree = "<group>"; };
+		F4A0CCDB17F5D1B000E8FB53 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		F4A0CCED17F60CC600E8FB53 /* Kittys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kittys.plist; sourceTree = "<group>"; };
+		F4A0CCF217F6252700E8FB53 /* DrinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewController.h; sourceTree = "<group>"; };
+		F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewController.m; sourceTree = "<group>"; };
+		F4A0CCF517F6258C00E8FB53 /* DrinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkTableViewCell.h; sourceTree = "<group>"; };
+		F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkTableViewCell.m; sourceTree = "<group>"; };
+		F4B7213A17F4CD99008C9E36 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		F4B7213B17F4CD99008C9E36 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		F4B7213C17F4CD99008C9E36 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		F4B7213D17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		F4B7213E17F4CD99008C9E36 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		F4B7213F17F4CD99008C9E36 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		F4B7214017F4CD99008C9E36 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		F4B7214117F4CD99008C9E36 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F4B7214217F4CD99008C9E36 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		F4B7214317F4CD99008C9E36 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		F4B7214417F4CD99008C9E36 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		F4B7214517F4CD99008C9E36 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		F4B7214617F4CD99008C9E36 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		F4B7214717F4CD99008C9E36 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		F4B7214817F4CD99008C9E36 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		F4B7214917F4CD99008C9E36 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		F4B7214A17F4CD99008C9E36 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		F4B7214B17F4CD99008C9E36 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		F4B7214C17F4CD99008C9E36 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F4B7215617F4E0D8008C9E36 /* KittyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KittyTableViewController.h; sourceTree = "<group>"; };
+		F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KittyTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F494D1D817F3692700B7F1CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48A671817F3781400E5C76F /* libiconv.dylib in Frameworks */,
+				F48A671617F3780600E5C76F /* QuartzCore.framework in Frameworks */,
+				F48A671417F377FE00E5C76F /* CoreVideo.framework in Frameworks */,
+				F48A671217F377F600E5C76F /* CoreMedia.framework in Frameworks */,
+				F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */,
+				F494D1E117F3692700B7F1CA /* CoreGraphics.framework in Frameworks */,
+				F494D1E317F3692700B7F1CA /* UIKit.framework in Frameworks */,
+				F48A670A17F377C100E5C76F /* libzbar.a in Frameworks */,
+				F494D1DF17F3692700B7F1CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F494D1F917F3692700B7F1CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F494D1FE17F3692700B7F1CA /* XCTest.framework in Frameworks */,
+				F494D20017F3692700B7F1CA /* UIKit.framework in Frameworks */,
+				F494D1FF17F3692700B7F1CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F48A66EC17F377C100E5C76F /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F48A66ED17F377C100E5C76F /* Headers */,
+				F48A670417F377C100E5C76F /* libzbar.a */,
+				F48A670517F377C100E5C76F /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		F48A66ED17F377C100E5C76F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F48A66EE17F377C100E5C76F /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F48A66EE17F377C100E5C76F /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F48A66EF17F377C100E5C76F /* zbar */,
+				F48A66F917F377C100E5C76F /* zbar.h */,
+				F48A66FA17F377C100E5C76F /* ZBarCameraSimulator.h */,
+				F48A66FB17F377C100E5C76F /* ZBarCaptureReader.h */,
+				F48A66FC17F377C100E5C76F /* ZBarHelpController.h */,
+				F48A66FD17F377C100E5C76F /* ZBarImage.h */,
+				F48A66FE17F377C100E5C76F /* ZBarImageScanner.h */,
+				F48A66FF17F377C100E5C76F /* ZBarReaderController.h */,
+				F48A670017F377C100E5C76F /* ZBarReaderView.h */,
+				F48A670117F377C100E5C76F /* ZBarReaderViewController.h */,
+				F48A670217F377C100E5C76F /* ZBarSDK.h */,
+				F48A670317F377C100E5C76F /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		F48A66EF17F377C100E5C76F /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				F48A66F017F377C100E5C76F /* Decoder.h */,
+				F48A66F117F377C100E5C76F /* Exception.h */,
+				F48A66F217F377C100E5C76F /* Image.h */,
+				F48A66F317F377C100E5C76F /* ImageScanner.h */,
+				F48A66F417F377C100E5C76F /* Processor.h */,
+				F48A66F517F377C100E5C76F /* Scanner.h */,
+				F48A66F617F377C100E5C76F /* Symbol.h */,
+				F48A66F717F377C100E5C76F /* Video.h */,
+				F48A66F817F377C100E5C76F /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		F48A670517F377C100E5C76F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F48A670617F377C100E5C76F /* zbar-back.png */,
+				F48A670717F377C100E5C76F /* zbar-help.html */,
+				F48A670817F377C100E5C76F /* zbar-helpicons.png */,
+				F48A670917F377C100E5C76F /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F494D1D217F3692700B7F1CA = {
+			isa = PBXGroup;
+			children = (
+				F494D1E417F3692700B7F1CA /* KittyClient */,
+				F494D20317F3692700B7F1CA /* KittyClientTests */,
+				F494D1DD17F3692700B7F1CA /* Frameworks */,
+				F494D1DC17F3692700B7F1CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F494D1DC17F3692700B7F1CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F494D1DB17F3692700B7F1CA /* KittyClient.app */,
+				F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F494D1DD17F3692700B7F1CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4B7213917F4CD99008C9E36 /* AFNetworking */,
+				F48A671717F3781300E5C76F /* libiconv.dylib */,
+				F48A671517F3780600E5C76F /* QuartzCore.framework */,
+				F48A671317F377FE00E5C76F /* CoreVideo.framework */,
+				F48A671117F377F600E5C76F /* CoreMedia.framework */,
+				F48A670F17F377ED00E5C76F /* AVFoundation.framework */,
+				F48A66EC17F377C100E5C76F /* ZBarSDK */,
+				F494D1DE17F3692700B7F1CA /* Foundation.framework */,
+				F494D1E017F3692700B7F1CA /* CoreGraphics.framework */,
+				F494D1E217F3692700B7F1CA /* UIKit.framework */,
+				F494D1FD17F3692700B7F1CA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F494D1E417F3692700B7F1CA /* KittyClient */ = {
+			isa = PBXGroup;
+			children = (
+				F4A0CCF117F6250700E8FB53 /* DrinkSelection */,
+				F4A0CCF017F624FB00E8FB53 /* UserSelection */,
+				F4A0CCEF17F624EE00E8FB53 /* KittySelection */,
+				F494D1ED17F3692700B7F1CA /* AppDelegate.h */,
+				F494D1EE17F3692700B7F1CA /* AppDelegate.m */,
+				F494D1F017F3692700B7F1CA /* Main.storyboard */,
+				F494D1F317F3692700B7F1CA /* ViewController.h */,
+				F494D1F417F3692700B7F1CA /* ViewController.m */,
+				F494D1F617F3692700B7F1CA /* Images.xcassets */,
+				F494D1E517F3692700B7F1CA /* Supporting Files */,
+			);
+			path = KittyClient;
+			sourceTree = "<group>";
+		};
+		F494D1E517F3692700B7F1CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F494D1E617F3692700B7F1CA /* KittyClient-Info.plist */,
+				F494D1E717F3692700B7F1CA /* InfoPlist.strings */,
+				F494D1EA17F3692700B7F1CA /* main.m */,
+				F494D1EC17F3692700B7F1CA /* KittyClient-Prefix.pch */,
+				F4A0CCED17F60CC600E8FB53 /* Kittys.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F494D20317F3692700B7F1CA /* KittyClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				F494D20917F3692700B7F1CA /* KittyClientTests.m */,
+				F494D20417F3692700B7F1CA /* Supporting Files */,
+			);
+			path = KittyClientTests;
+			sourceTree = "<group>";
+		};
+		F494D20417F3692700B7F1CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */,
+				F494D20617F3692700B7F1CA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4A0CCEF17F624EE00E8FB53 /* KittySelection */ = {
+			isa = PBXGroup;
+			children = (
+				F48A671C17F389C300E5C76F /* AddKittyViewController.h */,
+				F48A671D17F389C300E5C76F /* AddKittyViewController.m */,
+				F4B7215617F4E0D8008C9E36 /* KittyTableViewController.h */,
+				F4B7215717F4E0D8008C9E36 /* KittyTableViewController.m */,
+			);
+			name = KittySelection;
+			sourceTree = "<group>";
+		};
+		F4A0CCF017F624FB00E8FB53 /* UserSelection */ = {
+			isa = PBXGroup;
+			children = (
+				F4A0CCDB17F5D1B000E8FB53 /* UserTableViewController.h */,
+				F4A0CCDC17F5D1B000E8FB53 /* UserTableViewController.m */,
+			);
+			name = UserSelection;
+			sourceTree = "<group>";
+		};
+		F4A0CCF117F6250700E8FB53 /* DrinkSelection */ = {
+			isa = PBXGroup;
+			children = (
+				F4A0CCF217F6252700E8FB53 /* DrinkTableViewController.h */,
+				F4A0CCF317F6252700E8FB53 /* DrinkTableViewController.m */,
+				F4A0CCF517F6258C00E8FB53 /* DrinkTableViewCell.h */,
+				F4A0CCF617F6258C00E8FB53 /* DrinkTableViewCell.m */,
+			);
+			name = DrinkSelection;
+			sourceTree = "<group>";
+		};
+		F4B7213917F4CD99008C9E36 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F4B7213A17F4CD99008C9E36 /* AFHTTPRequestOperation.h */,
+				F4B7213B17F4CD99008C9E36 /* AFHTTPRequestOperation.m */,
+				F4B7213C17F4CD99008C9E36 /* AFHTTPRequestOperationManager.h */,
+				F4B7213D17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m */,
+				F4B7213E17F4CD99008C9E36 /* AFHTTPSessionManager.h */,
+				F4B7213F17F4CD99008C9E36 /* AFHTTPSessionManager.m */,
+				F4B7214017F4CD99008C9E36 /* AFNetworking.h */,
+				F4B7214117F4CD99008C9E36 /* AFNetworkReachabilityManager.h */,
+				F4B7214217F4CD99008C9E36 /* AFNetworkReachabilityManager.m */,
+				F4B7214317F4CD99008C9E36 /* AFSecurityPolicy.h */,
+				F4B7214417F4CD99008C9E36 /* AFSecurityPolicy.m */,
+				F4B7214517F4CD99008C9E36 /* AFURLConnectionOperation.h */,
+				F4B7214617F4CD99008C9E36 /* AFURLConnectionOperation.m */,
+				F4B7214717F4CD99008C9E36 /* AFURLRequestSerialization.h */,
+				F4B7214817F4CD99008C9E36 /* AFURLRequestSerialization.m */,
+				F4B7214917F4CD99008C9E36 /* AFURLResponseSerialization.h */,
+				F4B7214A17F4CD99008C9E36 /* AFURLResponseSerialization.m */,
+				F4B7214B17F4CD99008C9E36 /* AFURLSessionManager.h */,
+				F4B7214C17F4CD99008C9E36 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F494D1DA17F3692700B7F1CA /* KittyClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F494D20D17F3692700B7F1CA /* Build configuration list for PBXNativeTarget "KittyClient" */;
+			buildPhases = (
+				F494D1D717F3692700B7F1CA /* Sources */,
+				F494D1D817F3692700B7F1CA /* Frameworks */,
+				F494D1D917F3692700B7F1CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KittyClient;
+			productName = KittyClient;
+			productReference = F494D1DB17F3692700B7F1CA /* KittyClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F494D1FB17F3692700B7F1CA /* KittyClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F494D21017F3692700B7F1CA /* Build configuration list for PBXNativeTarget "KittyClientTests" */;
+			buildPhases = (
+				F494D1F817F3692700B7F1CA /* Sources */,
+				F494D1F917F3692700B7F1CA /* Frameworks */,
+				F494D1FA17F3692700B7F1CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F494D20217F3692700B7F1CA /* PBXTargetDependency */,
+			);
+			name = KittyClientTests;
+			productName = KittyClientTests;
+			productReference = F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F494D1D317F3692700B7F1CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Simon Jakubowski";
+				TargetAttributes = {
+					F494D1FB17F3692700B7F1CA = {
+						TestTargetID = F494D1DA17F3692700B7F1CA;
+					};
+				};
+			};
+			buildConfigurationList = F494D1D617F3692700B7F1CA /* Build configuration list for PBXProject "KittyClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F494D1D217F3692700B7F1CA;
+			productRefGroup = F494D1DC17F3692700B7F1CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F494D1DA17F3692700B7F1CA /* KittyClient */,
+				F494D1FB17F3692700B7F1CA /* KittyClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F494D1D917F3692700B7F1CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */,
+				F48A670C17F377C100E5C76F /* zbar-help.html in Resources */,
+				F48A670E17F377C100E5C76F /* zbar-samples.png in Resources */,
+				F48A670D17F377C100E5C76F /* zbar-helpicons.png in Resources */,
+				F48A670B17F377C100E5C76F /* zbar-back.png in Resources */,
+				F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */,
+				F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */,
+				F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F494D1FA17F3692700B7F1CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F494D20817F3692700B7F1CA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F494D1D717F3692700B7F1CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48A671E17F389C300E5C76F /* AddKittyViewController.m in Sources */,
+				F4A0CCF717F6258C00E8FB53 /* DrinkTableViewCell.m in Sources */,
+				F4B7215817F4E0D8008C9E36 /* KittyTableViewController.m in Sources */,
+				F4B7215117F4CD99008C9E36 /* AFSecurityPolicy.m in Sources */,
+				F494D1F517F3692700B7F1CA /* ViewController.m in Sources */,
+				F4A0CCF417F6252700E8FB53 /* DrinkTableViewController.m in Sources */,
+				F4B7214E17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m in Sources */,
+				F4B7215217F4CD99008C9E36 /* AFURLConnectionOperation.m in Sources */,
+				F4B7214D17F4CD99008C9E36 /* AFHTTPRequestOperation.m in Sources */,
+				F494D1EF17F3692700B7F1CA /* AppDelegate.m in Sources */,
+				F4B7215317F4CD99008C9E36 /* AFURLRequestSerialization.m in Sources */,
+				F4A0CCDD17F5D1B000E8FB53 /* UserTableViewController.m in Sources */,
+				F4B7214F17F4CD99008C9E36 /* AFHTTPSessionManager.m in Sources */,
+				F4B7215017F4CD99008C9E36 /* AFNetworkReachabilityManager.m in Sources */,
+				F4B7215417F4CD99008C9E36 /* AFURLResponseSerialization.m in Sources */,
+				F4B7215517F4CD99008C9E36 /* AFURLSessionManager.m in Sources */,
+				F494D1EB17F3692700B7F1CA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F494D1F817F3692700B7F1CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F494D20217F3692700B7F1CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F494D1DA17F3692700B7F1CA /* KittyClient */;
+			targetProxy = F494D20117F3692700B7F1CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F494D1E717F3692700B7F1CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F494D1E817F3692700B7F1CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F494D1F017F3692700B7F1CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F494D1F117F3692700B7F1CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F494D20617F3692700B7F1CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F494D20717F3692700B7F1CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F494D20B17F3692700B7F1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F494D20C17F3692700B7F1CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F494D20E17F3692700B7F1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
+				INFOPLIST_FILE = "KittyClient/KittyClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Simon/Projects/KittyClient/ZBarSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F494D20F17F3692700B7F1CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
+				INFOPLIST_FILE = "KittyClient/KittyClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Simon/Projects/KittyClient/ZBarSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F494D21117F3692700B7F1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KittyClient.app/KittyClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KittyClientTests/KittyClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F494D21217F3692700B7F1CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KittyClient.app/KittyClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KittyClient/KittyClient-Prefix.pch";
+				INFOPLIST_FILE = "KittyClientTests/KittyClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F494D1D617F3692700B7F1CA /* Build configuration list for PBXProject "KittyClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F494D20B17F3692700B7F1CA /* Debug */,
+				F494D20C17F3692700B7F1CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F494D20D17F3692700B7F1CA /* Build configuration list for PBXNativeTarget "KittyClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F494D20E17F3692700B7F1CA /* Debug */,
+				F494D20F17F3692700B7F1CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F494D21017F3692700B7F1CA /* Build configuration list for PBXNativeTarget "KittyClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F494D21117F3692700B7F1CA /* Debug */,
+				F494D21217F3692700B7F1CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F494D1D317F3692700B7F1CA /* Project object */;
+}
