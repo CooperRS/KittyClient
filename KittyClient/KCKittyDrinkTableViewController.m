@@ -36,7 +36,7 @@
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", responseObject);
         
         NSMutableArray *newDrinks = [NSMutableArray array];
         for (NSDictionary *aDrink in responseObject) {
@@ -97,14 +97,14 @@ static NSString *CellIdentifier = @"DrinkCell";
     if (aCell.stepper.value == 0)
         URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"decItem", [NSNumber numberWithInteger:aCell.tag] ]];
     
-    NSLog(@"%@", URL);
+    //NSLog(@"%@", URL);
         
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         
         aCell.itemCount.text = [[responseObject objectForKey:@"itemCount"] stringValue];
         aCell.stepper.value = 1;
