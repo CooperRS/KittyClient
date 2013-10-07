@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA051B5C18035F4000EAF584 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA051B5B18035F4000EAF584 /* SessionManager.m */; };
 		CA2772C217F9AC0E0021E507 /* KCKittyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2772C117F9AC0E0021E507 /* KCKittyManager.m */; };
 		CAA5E59C17F9D18D0071D08B /* KCKittyUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */; };
 		F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670F17F377ED00E5C76F /* AVFoundation.framework */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA051B5A18035F4000EAF584 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		CA051B5B18035F4000EAF584 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		CA2772C017F9AC0E0021E507 /* KCKittyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyManager.h; sourceTree = "<group>"; };
 		CA2772C117F9AC0E0021E507 /* KCKittyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyManager.m; sourceTree = "<group>"; };
 		CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserCell.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 			children = (
 				F494D1F317F3692700B7F1CA /* KCScanViewController.h */,
 				F494D1F417F3692700B7F1CA /* KCScanViewController.m */,
+				CA051B5A18035F4000EAF584 /* SessionManager.h */,
+				CA051B5B18035F4000EAF584 /* SessionManager.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 				F4B7214E17F4CD99008C9E36 /* AFHTTPRequestOperationManager.m in Sources */,
 				F4B7215217F4CD99008C9E36 /* AFURLConnectionOperation.m in Sources */,
 				F4B7214D17F4CD99008C9E36 /* AFHTTPRequestOperation.m in Sources */,
+				CA051B5C18035F4000EAF584 /* SessionManager.m in Sources */,
 				F494D1EF17F3692700B7F1CA /* KCAppDelegate.m in Sources */,
 				F4B7215317F4CD99008C9E36 /* AFURLRequestSerialization.m in Sources */,
 				F4A0CCDD17F5D1B000E8FB53 /* KCKittyUserTableViewController.m in Sources */,

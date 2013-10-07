@@ -10,14 +10,14 @@
 
 @interface KCKittyManager : NSObject
 
-@property (readonly) NSNumber *selectedKittyID;
+@property (readonly) NSString *selectedKittyID;
 @property (readonly) NSNumber *selectedUserID;
 
 @property (nonatomic, readonly) NSArray *kitties;
 
 + (instancetype)sharedKittyManager;
 
-- (void)setSelectedKittyID:(NSInteger)kittyID andUserID:(NSInteger)userID;
+- (void)setSelectedKittyID:(NSString *)kittyID andUserID:(NSNumber *)userID;
 
 - (void)addKitty:(NSDictionary *)newKitty;
 - (NSDictionary *)kittyAtIndex:(NSInteger)index;

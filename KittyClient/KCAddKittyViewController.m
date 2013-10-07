@@ -32,9 +32,7 @@
         [[KCKittyManager sharedKittyManager] addKitty:responseObject];
         [self.delegate addKittyVCDidFinish:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit der eingegebenen ID konnte nicht gefunden werden. Bitte die eingegebene ID überprüfen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];

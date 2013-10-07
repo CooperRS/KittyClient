@@ -35,8 +35,6 @@
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //NSLog(@"JSON: %@", responseObject);
-        
         NSMutableArray *newUsers = [NSMutableArray array];
         for (NSDictionary *aUser in responseObject) {
             [newUsers addObject:aUser];
@@ -45,10 +43,7 @@
         
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-#warning Rework error messages
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der Benutzer ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
@@ -86,12 +81,13 @@
 static NSString *CellIdentifier = @"UserCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     KCKittyUserCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSDictionary *userDict = [self.users objectAtIndex:indexPath.row];
     
-    cell.nameLabel.text = [[self.users objectAtIndex:indexPath.row] objectForKey:@"name"];
-    cell.balanceLabel.text = [NSString stringWithFormat:@"%@ EUR", [[self.users objectAtIndex:indexPath.row] objectForKey:@"money"]];
+    cell.nameLabel.text = [userDict objectForKey:@"name"];
+    cell.balanceLabel.text = [NSString stringWithFormat:@"%@ €", [userDict objectForKey:@"money"]];
     cell.infoButton.tag = indexPath.row;
     
-    if([KCKittyManager sharedKittyManager].selectedKittyID && [KCKittyManager sharedKittyManager] && self.selectedKittyIndex == [[KCKittyManager sharedKittyManager].selectedKittyID integerValue] && indexPath.row == [[KCKittyManager sharedKittyManager].selectedUserID integerValue]) {
+    if([[self.kitty objectForKey:@"kittyId"] isEqualToString:[KCKittyManager sharedKittyManager].selectedKittyID] && [[userDict objectForKey:@"userId"] isEqualToNumber:[KCKittyManager sharedKittyManager].selectedUserID]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -101,7 +97,8 @@ static NSString *CellIdentifier = @"UserCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[KCKittyManager sharedKittyManager] setSelectedKittyID:self.selectedKittyIndex andUserID:indexPath.row];
+    NSDictionary *userDict = [self.users objectAtIndex:indexPath.row];
+    [[KCKittyManager sharedKittyManager] setSelectedKittyID:[self.kitty objectForKey:@"kittyId"] andUserID:[userDict objectForKey:@"userId"]];
     
     [self.tableView reloadData];
 }

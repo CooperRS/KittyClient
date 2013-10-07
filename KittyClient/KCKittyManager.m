@@ -28,7 +28,7 @@ static KCKittyManager *sharedKittyManager = nil;
 }
 
 #pragma Settings
-- (NSNumber *)selectedKitty {
+- (NSString *)selectedKittyID {
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"kittyID"];
 }
 
@@ -36,9 +36,9 @@ static KCKittyManager *sharedKittyManager = nil;
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"userID"];
 }
 
-- (void)setSelectedKittyID:(NSInteger)kittyID andUserID:(NSInteger)userID {
-    [[NSUserDefaults standardUserDefaults] setInteger:kittyID forKey:@"kittyID"];
-    [[NSUserDefaults standardUserDefaults] setInteger:userID forKey:@"userID"];
+- (void)setSelectedKittyID:(NSString *)kittyID andUserID:(NSNumber *)userID {
+    [[NSUserDefaults standardUserDefaults] setObject:kittyID forKey:@"kittyID"];
+    [[NSUserDefaults standardUserDefaults] setObject:userID forKey:@"userID"];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

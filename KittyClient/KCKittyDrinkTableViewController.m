@@ -26,7 +26,7 @@
     [super viewDidLoad];
 
     self.drinks = [NSMutableArray array];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.user objectForKey:@"name"], [self.user objectForKey:@"money"]];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ €)", [self.user objectForKey:@"name"], [self.user objectForKey:@"money"]];
     
 #warning MBProgressHUD here!
     
@@ -46,10 +46,7 @@
         self.drinks = newDrinks;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-#warning Rework error messages
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
@@ -79,7 +76,7 @@ static NSString *CellIdentifier = @"DrinkCell";
     
     NSDictionary* aDrink = [self.drinks objectAtIndex:indexPath.row];
     cell.itemName.text = [aDrink objectForKey:@"itemName"];
-    cell.itemPrice.text = [NSString stringWithFormat:@"(%@ EUR)",[aDrink objectForKey:@"itemPrice"] ];
+    cell.itemPrice.text = [NSString stringWithFormat:@"(%@ €)",[aDrink objectForKey:@"itemPrice"] ];
     cell.itemCount.text = [[aDrink objectForKey:@"itemCount"] stringValue];
     cell.tag = [[aDrink objectForKey:@"itemId"] integerValue];
     cell.delegate = self;
@@ -109,12 +106,9 @@ static NSString *CellIdentifier = @"DrinkCell";
         aCell.itemCount.text = [[responseObject objectForKey:@"itemCount"] stringValue];
         aCell.stepper.value = 1;
         
-        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ EUR)", [self.user objectForKey:@"name"], [responseObject objectForKey:@"userMoney"]];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ €)", [self.user objectForKey:@"name"], [responseObject objectForKey:@"userMoney"]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
-#warning Rework error messages
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"  message:@"Wrong Kitty ID?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Beim Setzen der Anzahl getrunkener Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
