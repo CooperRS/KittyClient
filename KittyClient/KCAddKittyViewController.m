@@ -12,7 +12,7 @@
 #import "KCKittyManager.h"
 #import "AFHTTPRequestOperation.h"
 
-@interface KCAddKittyViewController ()
+@interface KCAddKittyViewController () <UISearchBarDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *textField;
 
@@ -54,6 +54,14 @@
     if(indexPath.section == 0 && indexPath.row == 1) {
         [self addButtonTapped:nil];
     }
+}
+
+#pragma mark - UITextField Delegates
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self addButtonTapped:textField];
+    
+    return YES;
 }
 
 @end

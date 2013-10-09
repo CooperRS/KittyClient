@@ -5,11 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>82ED798E-3E13-435A-8066-2169E58124DE</string>
+	<string>5A416CDA-87DF-4E38-9226-55FD5F71C7C3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>KittyClient</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>16E84C09-C479-4A58-826E-879A803BCA31</key>
+		<string>https://github.com/AFNetworking/AFNetworking</string>
+		<key>5E9C3533-5B2B-4A79-8E2F-375C39698D2D</key>
+		<string>https://github.com/matej/MBProgressHUD</string>
 		<key>C8D5539A-0933-4709-8212-C867FECE06C7</key>
 		<string>ssh://pygroup.de/kitty</string>
 	</dict>
@@ -17,6 +21,10 @@
 	<string>KittyClient.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>16E84C09-C479-4A58-826E-879A803BCA31</key>
+		<string>../../External/AFNetworking</string>
+		<key>5E9C3533-5B2B-4A79-8E2F-375C39698D2D</key>
+		<string>../../External/MBProgressHUD</string>
 		<key>C8D5539A-0933-4709-8212-C867FECE06C7</key>
 		<string>../..</string>
 	</dict>
@@ -32,9 +40,25 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16E84C09-C479-4A58-826E-879A803BCA31</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>C8D5539A-0933-4709-8212-C867FECE06C7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Kitty</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E9C3533-5B2B-4A79-8E2F-375C39698D2D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MBProgressHUD</string>
 		</dict>
 	</array>
 </dict>
