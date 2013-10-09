@@ -20,6 +20,7 @@
 		CAB89C9218053AF100C75632 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C8718053AF100C75632 /* AFURLRequestSerialization.m */; };
 		CAB89C9318053AF100C75632 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C8918053AF100C75632 /* AFURLResponseSerialization.m */; };
 		CAB89C9418053AF100C75632 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C8B18053AF100C75632 /* AFURLSessionManager.m */; };
+		CABCD0B31805B610005E17AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABCD0B11805B610005E17AD /* Main.storyboard */; };
 		F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670F17F377ED00E5C76F /* AVFoundation.framework */; };
 		F48A671217F377F600E5C76F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671117F377F600E5C76F /* CoreMedia.framework */; };
 		F48A671417F377FE00E5C76F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671317F377FE00E5C76F /* CoreVideo.framework */; };
@@ -29,19 +30,15 @@
 		F494D1DF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
 		F494D1E117F3692700B7F1CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E017F3692700B7F1CA /* CoreGraphics.framework */; };
 		F494D1E317F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
-		F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D1E717F3692700B7F1CA /* InfoPlist.strings */; };
 		F494D1EB17F3692700B7F1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EA17F3692700B7F1CA /* main.m */; };
 		F494D1EF17F3692700B7F1CA /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */; };
-		F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F017F3692700B7F1CA /* Main.storyboard */; };
 		F494D1F517F3692700B7F1CA /* KCScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D1F417F3692700B7F1CA /* KCScanViewController.m */; };
 		F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494D1F617F3692700B7F1CA /* Images.xcassets */; };
 		F494D1FE17F3692700B7F1CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1FD17F3692700B7F1CA /* XCTest.framework */; };
 		F494D1FF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
 		F494D20017F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
-		F494D20817F3692700B7F1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F494D20617F3692700B7F1CA /* InfoPlist.strings */; };
 		F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D20917F3692700B7F1CA /* KittyClientTests.m */; };
 		F4A0CCDD17F5D1B000E8FB53 /* KCKittyUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */; };
-		F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4A0CCED17F60CC600E8FB53 /* Kittys.plist */; };
 		F4A0CCF417F6252700E8FB53 /* KCKittyDrinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */; };
 		F4A0CCF717F6258C00E8FB53 /* KCKittyDrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF617F6258C00E8FB53 /* KCKittyDrinkCell.m */; };
 		F4B7215817F4E0D8008C9E36 /* KCKittyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7215717F4E0D8008C9E36 /* KCKittyTableViewController.m */; };
@@ -62,6 +59,7 @@
 		CA051B5B18035F4000EAF584 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		CA2772C017F9AC0E0021E507 /* KCKittyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyManager.h; sourceTree = "<group>"; };
 		CA2772C117F9AC0E0021E507 /* KCKittyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyManager.m; sourceTree = "<group>"; };
+		CA74265B1805B6700099ABC5 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserCell.h; sourceTree = "<group>"; };
 		CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserCell.m; sourceTree = "<group>"; };
 		CAB89C7618053AE400C75632 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = External/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
@@ -97,23 +95,19 @@
 		F494D1E017F3692700B7F1CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F494D1E217F3692700B7F1CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F494D1E617F3692700B7F1CA /* KittyClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClient-Info.plist"; sourceTree = "<group>"; };
-		F494D1E817F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F494D1EA17F3692700B7F1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F494D1EC17F3692700B7F1CA /* KittyClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KittyClient-Prefix.pch"; sourceTree = "<group>"; };
 		F494D1ED17F3692700B7F1CA /* KCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
 		F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; };
-		F494D1F117F3692700B7F1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F494D1F317F3692700B7F1CA /* KCScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCScanViewController.h; sourceTree = "<group>"; };
 		F494D1F417F3692700B7F1CA /* KCScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCScanViewController.m; sourceTree = "<group>"; };
 		F494D1F617F3692700B7F1CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittyClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494D1FD17F3692700B7F1CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClientTests-Info.plist"; sourceTree = "<group>"; };
-		F494D20717F3692700B7F1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F494D20917F3692700B7F1CA /* KittyClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KittyClientTests.m; sourceTree = "<group>"; };
 		F4A0CCDB17F5D1B000E8FB53 /* KCKittyUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserTableViewController.h; sourceTree = "<group>"; };
 		F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserTableViewController.m; sourceTree = "<group>"; };
-		F4A0CCED17F60CC600E8FB53 /* Kittys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kittys.plist; sourceTree = "<group>"; };
 		F4A0CCF217F6252700E8FB53 /* KCKittyDrinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyDrinkTableViewController.h; sourceTree = "<group>"; };
 		F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyDrinkTableViewController.m; sourceTree = "<group>"; };
 		F4A0CCF517F6258C00E8FB53 /* KCKittyDrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyDrinkCell.h; sourceTree = "<group>"; };
@@ -268,7 +262,7 @@
 				CA2772BD17F9AABF0021E507 /* Main */,
 				CA2772BE17F9AAC30021E507 /* Settings */,
 				CA2772BF17F9ABFF0021E507 /* Datamodel */,
-				F494D1F017F3692700B7F1CA /* Main.storyboard */,
+				CABCD0B11805B610005E17AD /* Main.storyboard */,
 				F494D1ED17F3692700B7F1CA /* KCAppDelegate.h */,
 				F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */,
 				F494D1F617F3692700B7F1CA /* Images.xcassets */,
@@ -281,10 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				F494D1E617F3692700B7F1CA /* KittyClient-Info.plist */,
-				F494D1E717F3692700B7F1CA /* InfoPlist.strings */,
 				F494D1EA17F3692700B7F1CA /* main.m */,
 				F494D1EC17F3692700B7F1CA /* KittyClient-Prefix.pch */,
-				F4A0CCED17F60CC600E8FB53 /* Kittys.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -302,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */,
-				F494D20617F3692700B7F1CA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -370,6 +361,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = F494D1D217F3692700B7F1CA;
 			productRefGroup = F494D1DC17F3692700B7F1CA /* Products */;
@@ -388,9 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */,
-				F494D1E917F3692700B7F1CA /* InfoPlist.strings in Resources */,
-				F4A0CCEE17F60CC600E8FB53 /* Kittys.plist in Resources */,
-				F494D1F217F3692700B7F1CA /* Main.storyboard in Resources */,
+				CABCD0B31805B610005E17AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +388,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F494D20817F3692700B7F1CA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,28 +441,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F494D1E717F3692700B7F1CA /* InfoPlist.strings */ = {
+		CABCD0B11805B610005E17AD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F494D1E817F3692700B7F1CA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F494D1F017F3692700B7F1CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F494D1F117F3692700B7F1CA /* Base */,
+				CA74265B1805B6700099ABC5 /* de */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F494D20617F3692700B7F1CA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F494D20717F3692700B7F1CA /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

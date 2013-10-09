@@ -77,6 +77,13 @@
     [self performSegueWithIdentifier:@"ShowUser" sender:sender];
 }
 
+- (IBAction)exportButtonTapped:(id)sender {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"kitty://%@", self.kitty[@"kittyId"]]];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
 #pragma mark - UITableViewDelegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.users count];
@@ -88,7 +95,7 @@ static NSString *CellIdentifier = @"UserCell";
     NSDictionary *userDict = [self.users objectAtIndex:indexPath.row];
     
     cell.nameLabel.text = [userDict objectForKey:@"name"];
-    cell.balanceLabel.text = [NSString stringWithFormat:@"%@ €", [userDict objectForKey:@"money"]];
+    cell.balanceLabel.text = [NSString stringWithFormat:@"%.2f €", [[userDict objectForKey:@"money"] doubleValue]];
     cell.infoButton.tag = indexPath.row;
     
     if([[self.kitty objectForKey:@"kittyId"] isEqualToString:[KCKittyManager sharedKittyManager].selectedKittyID] && [[userDict objectForKey:@"userId"] isEqualToNumber:[KCKittyManager sharedKittyManager].selectedUserID]) {

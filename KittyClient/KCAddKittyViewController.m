@@ -22,10 +22,20 @@
 
 #pragma mark - Actions
 - (IBAction)addButtonTapped:(id)sender {
+    NSString *enteredKittyID = self.textField.text;
+    for(NSDictionary *aKitty in [KCKittyManager sharedKittyManager].kitties) {
+        if([[enteredKittyID capitalizedString] isEqualToString:[aKitty[@"kittyId"] capitalizedString]]) {
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit dieser ID wurde bereits hinzugefügt. Bitte eine andere ID eingeben." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [theAlert show];
+            
+            return;
+        }
+    }
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     hud.labelText = @"Laden..";
     
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"kitty", self.textField.text]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"kitty", enteredKittyID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];

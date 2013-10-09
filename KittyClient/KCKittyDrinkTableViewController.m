@@ -86,7 +86,7 @@ static NSString *CellIdentifier = @"DrinkCell";
     
     NSDictionary* aDrink = [self.drinks objectAtIndex:indexPath.row];
     cell.itemName.text = [aDrink objectForKey:@"itemName"];
-    cell.itemPrice.text = [NSString stringWithFormat:@"(%@ €)",[aDrink objectForKey:@"itemPrice"] ];
+    cell.itemPrice.text = [NSString stringWithFormat:@"(%.2f €)", [[aDrink objectForKey:@"itemPrice"] doubleValue]];
     cell.itemCount.text = [[aDrink objectForKey:@"itemCount"] stringValue];
     cell.tag = [[aDrink objectForKey:@"itemId"] integerValue];
     cell.delegate = self;
