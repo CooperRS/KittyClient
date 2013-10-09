@@ -37,7 +37,8 @@
     hud.labelText = @"Laden..";
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [self.user objectForKey:@"userId"]]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    //NSLog(@"URL: %@", URL);
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -103,20 +104,25 @@ static NSString *CellIdentifier = @"DrinkCell";
     if (aCell.stepper.value == 0)
         URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"decItem", [NSNumber numberWithInteger:aCell.tag] ]];
     
-    //NSLog(@"%@", URL);
-        
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSLog(@"%@", URL);
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Laden..";
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", responseObject);
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
         aCell.itemCount.text = [[responseObject objectForKey:@"itemCount"] stringValue];
         aCell.stepper.value = 1;
         
-        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ €)", [self.user objectForKey:@"name"], [responseObject objectForKey:@"userMoney"]];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%.2f €)", [self.user objectForKey:@"name"], [[responseObject objectForKey:@"userMoney"] doubleValue]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Beim Setzen der Anzahl getrunkener Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];

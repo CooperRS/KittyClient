@@ -107,7 +107,7 @@
             AVMetadataMachineReadableCodeObject *aReadableObject = (AVMetadataMachineReadableCodeObject *)anObject;
             
             NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [KCKittyManager sharedKittyManager].selectedUserID]];
-            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+            NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
             
             AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
             op.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -149,7 +149,7 @@
         hud.labelText = @"Laden..";
         
         NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"incItem", [self.currentUserItem objectForKey:@"itemId"]]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+        NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
         
         AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         op.responseSerializer = [AFJSONResponseSerializer serializer];
