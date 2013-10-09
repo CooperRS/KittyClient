@@ -7,6 +7,7 @@
 //
 
 #import "KCAddKittyViewController.h"
+#import "MBProgressHUD.h"
 
 #import "KCKittyManager.h"
 #import "AFHTTPRequestOperation.h"
@@ -21,6 +22,9 @@
 
 #pragma mark - Actions
 - (IBAction)addButtonTapped:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Laden..";
+    
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"kitty", self.textField.text]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
@@ -28,10 +32,13 @@
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
         [[KCKittyManager sharedKittyManager] addKitty:responseObject];
         [self.delegate addKittyVCDidFinish:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit der eingegebenen ID konnte nicht gefunden werden. Bitte die eingegebene ID überprüfen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];

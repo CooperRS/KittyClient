@@ -7,9 +7,9 @@
 //
 
 #import "KCKittyUserTableViewController.h"
+#import "MBProgressHUD.h"
 
 #import "KCKittyDrinkTableViewController.h"
-
 #import "KCKittyUserCell.h"
 
 #import "KCKittyManager.h"
@@ -24,10 +24,11 @@
 
 @implementation KCKittyUserTableViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-#warning MBProgressHUD here!
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Laden..";
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"users", [self.kitty objectForKey:@"kittyId"] ]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
@@ -41,8 +42,11 @@
         }
         self.users = newUsers;
         
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der Benutzer ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];

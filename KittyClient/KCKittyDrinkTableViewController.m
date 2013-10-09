@@ -7,6 +7,7 @@
 //
 
 #import "KCKittyDrinkTableViewController.h"
+#import "MBProgressHUD.h"
 
 #import "KCKittyDrinkCell.h"
 
@@ -27,8 +28,13 @@
 
     self.drinks = [NSMutableArray array];
     self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ €)", [self.user objectForKey:@"name"], [self.user objectForKey:@"money"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-#warning MBProgressHUD here!
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Laden..";
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [self.user objectForKey:@"userId"]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
@@ -42,10 +48,13 @@
         for (NSDictionary *aDrink in responseObject) {
             [newDrinks addObject:aDrink];
         }
-        
         self.drinks = newDrinks;
+        
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [theAlert show];
     }];

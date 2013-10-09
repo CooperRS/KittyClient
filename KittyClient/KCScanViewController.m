@@ -8,6 +8,7 @@
 
 #import "KCScanViewController.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD.h"
 
 #import "KCKittyManager.h"
 #import "SessionManager.h"
@@ -100,8 +101,10 @@
         
         AVMetadataObject *anObject = [metadataObjects lastObject];
         if(anObject && [anObject isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            hud.labelText = @"Laden..";
+            
             AVMetadataMachineReadableCodeObject *aReadableObject = (AVMetadataMachineReadableCodeObject *)anObject;
-#warning MBProgressHUD here!
             
             NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [KCKittyManager sharedKittyManager].selectedUserID]];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
@@ -109,6 +112,8 @@
             AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
             op.responseSerializer = [AFJSONResponseSerializer serializer];
             [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+                
                 BOOL foundEAN = NO;
                 for(NSDictionary *aUserItem in responseObject) {
                     if([[aUserItem objectForKey:@"itemEAN"] isKindOfClass:[NSString class]] && [[aUserItem objectForKey:@"itemEAN"] isEqualToString:aReadableObject.stringValue]) {
@@ -127,6 +132,8 @@
                     [theAlert show];
                 }
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+                
                 UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der verfügbaren Getränke ist ein Fehler passiert. Ist unter den Einstellungen eine Kitty und ein Benutzer ausgewählt?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [theAlert show];
             }];
@@ -138,15 +145,22 @@
 #pragma mark UIActionSheet Delegates
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if(buttonIndex != [actionSheet cancelButtonIndex]) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        hud.labelText = @"Laden..";
+        
         NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"incItem", [self.currentUserItem objectForKey:@"itemId"]]];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         
         AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         op.responseSerializer = [AFJSONResponseSerializer serializer];
         [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+            
             UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Erfolg" message:@"Der Getränk wurde erfolgreich gekauft. Viel Spaß damit!" delegate:self cancelButtonTitle:@"Danke" otherButtonTitles:nil];
             [theAlert show];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+            
             UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Beim Kaufen des Getränkes ist ein fehler passiert. Bitte erneut versuchen." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [theAlert show];
         }];

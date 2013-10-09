@@ -1,0 +1,6 @@
+[submodule "External/AFNetworking"]
+	path = External/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking
+[submodule "External/MBProgressHUD"]
+	path = External/MBProgressHUD
+	url = https://github.com/matej/MBProgressHUD
