@@ -27,7 +27,7 @@
     [super viewDidLoad];
 
     self.drinks = [NSMutableArray array];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%@ €)", [self.user objectForKey:@"name"], [self.user objectForKey:@"money"]];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ (%.2f €)", [self.user objectForKey:@"name"], [[self.user objectForKey:@"money"] doubleValue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,6 +78,14 @@
 #pragma mark - UITableView Delegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.drinks count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if(section == 0) {
+        return @"Getränke";
+    }
+    
+    return @"";
 }
 
 static NSString *CellIdentifier = @"DrinkCell";

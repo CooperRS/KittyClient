@@ -174,20 +174,20 @@
         <scene sceneID="pFo-c8-cGl">
             <objects>
                 <tableViewController id="Zqa-Rd-egk" customClass="KCKittyDrinkTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" id="ic1-Ac-Irc">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ic1-Ac-Irc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrinkCell" rowHeight="60" id="111-va-Lkj" customClass="KCKittyDrinkCell">
-                                <rect key="frame" x="0.0" y="119" width="320" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrinkCell" id="111-va-Lkj" customClass="KCKittyDrinkCell">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="111-va-Lkj" id="gSV-vM-6X0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="USG-hE-p29">
-                                            <rect key="frame" x="211" y="15" width="94" height="29"/>
+                                            <rect key="frame" x="211" y="7" width="94" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="A57-1t-KSI"/>
@@ -198,7 +198,7 @@
                                             </connections>
                                         </stepper>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0,33l Fritz Kola" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF3-gS-vGU">
-                                            <rect key="frame" x="15" y="11" width="157" height="21"/>
+                                            <rect key="frame" x="15" y="3" width="157" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="nsB-LH-Ndm"/>
@@ -207,7 +207,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="(0,85 EUR)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EV-Jl-UO4">
-                                            <rect key="frame" x="15" y="29" width="157" height="21"/>
+                                            <rect key="frame" x="15" y="21" width="157" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="jcm-0W-jnW"/>
@@ -216,14 +216,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="748" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-LM-Wyw">
-                                            <rect key="frame" x="180" y="18" width="23" height="24"/>
+                                            <rect key="frame" x="180" y="10" width="23" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="nF3-gS-vGU" firstAttribute="top" secondItem="gSV-vM-6X0" secondAttribute="top" constant="11" id="EzW-y6-8Zw"/>
                                         <constraint firstAttribute="trailing" secondItem="USG-hE-p29" secondAttribute="trailing" constant="15" id="Ida-N5-5AQ"/>
                                         <constraint firstItem="1EV-Jl-UO4" firstAttribute="trailing" secondItem="nF3-gS-vGU" secondAttribute="trailing" id="OoA-rb-NJp"/>
                                         <constraint firstItem="USG-hE-p29" firstAttribute="leading" secondItem="SRr-LM-Wyw" secondAttribute="trailing" constant="8" id="WO0-u0-Dsm"/>
@@ -232,6 +231,7 @@
                                         <constraint firstAttribute="centerY" secondItem="USG-hE-p29" secondAttribute="centerY" id="mSR-U6-KJC"/>
                                         <constraint firstItem="1EV-Jl-UO4" firstAttribute="leading" secondItem="gSV-vM-6X0" secondAttribute="leading" constant="15" id="rHn-EV-Lwo"/>
                                         <constraint firstAttribute="centerY" secondItem="SRr-LM-Wyw" secondAttribute="centerY" id="utH-YK-1UR"/>
+                                        <constraint firstAttribute="centerY" secondItem="nF3-gS-vGU" secondAttribute="centerY" constant="8" id="ydq-aU-3aK"/>
                                         <constraint firstItem="nF3-gS-vGU" firstAttribute="leading" secondItem="gSV-vM-6X0" secondAttribute="leading" constant="15" id="zE5-MK-Hjg"/>
                                     </constraints>
                                 </tableViewCellContentView>

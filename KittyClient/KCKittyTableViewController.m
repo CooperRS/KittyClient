@@ -36,6 +36,14 @@
     return [self.kittys count] + 1;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Gespeichert";
+    }
+    
+    return @"";
+}
+
 static NSString *AddKittyCellIdentifier = @"AddCell";
 static NSString *KittyCellIdentifier = @"KittyCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

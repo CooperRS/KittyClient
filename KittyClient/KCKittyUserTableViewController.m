@@ -24,13 +24,19 @@
 
 @implementation KCKittyUserTableViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = self.kitty[@"name"];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     hud.labelText = @"Laden..";
     
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"users", [self.kitty objectForKey:@"kittyId"] ]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"users", [self.kitty objectForKey:@"kittyId"]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -87,6 +93,14 @@
 #pragma mark - UITableViewDelegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.users count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if(section == 0) {
+        return @"Benutzer";
+    }
+    
+    return @"";
 }
 
 static NSString *CellIdentifier = @"UserCell";
