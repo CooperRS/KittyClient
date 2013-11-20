@@ -27,7 +27,26 @@ static KCKittyManager *sharedKittyManager = nil;
     return sharedKittyManager;
 }
 
++ (void)initialize {
+    NSDictionary *standardDefaults = @{@"serverURL": @"http://kitty.pygroup.de"};
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:standardDefaults];
+}
+
 #pragma Settings
+- (NSString *)serverURL {
+    return [self.serverBaseURL stringByAppendingString:@"/api/%@/%@/"];
+}
+
+- (NSString *)serverBaseURL {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"serverURL"];
+}
+
+- (void)setServerBaseURL:(NSString *)serverBaseURL {
+    [[NSUserDefaults standardUserDefaults] setObject:serverBaseURL forKey:@"serverURL"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (NSString *)selectedKittyID {
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"kittyID"];
 }
@@ -95,6 +114,11 @@ static KCKittyManager *sharedKittyManager = nil;
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
+    [self save];
+}
+
+- (void)removeAllKitties {
+    [self.mutableKitties removeAllObjects];
     [self save];
 }
 

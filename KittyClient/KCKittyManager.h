@@ -10,6 +10,9 @@
 
 @interface KCKittyManager : NSObject
 
+@property (readonly) NSString *serverURL;
+@property (nonatomic, strong) NSString *serverBaseURL;
+
 @property (readonly) NSString *selectedKittyID;
 @property (readonly) NSNumber *selectedUserID;
 
@@ -23,6 +26,7 @@
 - (NSDictionary *)kittyAtIndex:(NSInteger)index;
 - (void)replaceKittyAtIndex:(NSInteger)index withKitty:(NSDictionary *)newKitty;
 - (void)removeKittyAtIndex:(NSInteger)index;
+- (void)removeAllKitties;
 
 - (void)save;
 

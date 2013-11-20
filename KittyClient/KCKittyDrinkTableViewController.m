@@ -36,7 +36,7 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     hud.labelText = @"Laden..";
     
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"userItems", [self.user objectForKey:@"userId"]]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"userItems", [self.user objectForKey:@"userId"]]];
     //NSLog(@"URL: %@", URL);
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
@@ -108,9 +108,9 @@ static NSString *CellIdentifier = @"DrinkCell";
     
     NSURL *URL;
     if (aCell.stepper.value == 2)
-        URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"incItem", [NSNumber numberWithInteger:aCell.tag] ]];
+        URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"incItem", [NSNumber numberWithInteger:aCell.tag] ]];
     if (aCell.stepper.value == 0)
-        URL = [NSURL URLWithString:[NSString stringWithFormat:BASE_API_URL, @"decItem", [NSNumber numberWithInteger:aCell.tag] ]];
+        URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"decItem", [NSNumber numberWithInteger:aCell.tag] ]];
     
     NSLog(@"%@", URL);
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];

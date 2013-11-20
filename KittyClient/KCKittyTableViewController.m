@@ -13,7 +13,9 @@
 
 #import "KCKittyManager.h"
 
-@interface KCKittyTableViewController () <KCAddKittyViewControllerDelegate>
+#import "KCTextFieldCell.h"
+
+@interface KCKittyTableViewController () <KCAddKittyViewControllerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *kittys;
 
@@ -32,13 +34,24 @@
 }
 
 #pragma mark - UITableVide Delegates
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.kittys count] + 1;
+    if(section == 1)
+        return [self.kittys count] + 1;
+    else if(section == 0)
+        return 1;
+    
+    return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 1) {
         return @"Gespeichert";
+    } else if (section == 0) {
+        return @"Server URL";
     }
     
     return @"";
@@ -46,31 +59,45 @@
 
 static NSString *AddKittyCellIdentifier = @"AddCell";
 static NSString *KittyCellIdentifier = @"KittyCell";
+static NSString *URLCellIdentifier = @"URLCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row >= [self.kittys count]) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddKittyCellIdentifier forIndexPath:indexPath];
-        return cell;
-    } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KittyCellIdentifier forIndexPath:indexPath];
-        NSDictionary *aKitty = [self.kittys objectAtIndex:indexPath.row];
-        
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", [aKitty objectForKey:@"name"], [aKitty objectForKey:@"kittyId"]];
-        cell.detailTextLabel.text = [aKitty objectForKey:@"createdBy"];
-        
+    if(indexPath.section == 1) {
+        if(indexPath.row >= [self.kittys count]) {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddKittyCellIdentifier forIndexPath:indexPath];
+            return cell;
+        } else {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KittyCellIdentifier forIndexPath:indexPath];
+            NSDictionary *aKitty = [self.kittys objectAtIndex:indexPath.row];
+            
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", [aKitty objectForKey:@"name"], [aKitty objectForKey:@"kittyId"]];
+            cell.detailTextLabel.text = [aKitty objectForKey:@"createdBy"];
+            
+            return cell;
+        }
+    } else if(indexPath.section == 0) {
+        KCTextFieldCell *cell = (KCTextFieldCell *)[self.tableView dequeueReusableCellWithIdentifier:URLCellIdentifier];
+        cell.textField.text = [KCKittyManager sharedKittyManager].serverBaseURL;
+        cell.textField.returnKeyType = UIReturnKeyDone;
         return cell;
     }
+    
+    return nil;
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row >= [self.kittys count]) {
-        return UITableViewCellEditingStyleInsert;
-    } else {
-        return UITableViewCellEditingStyleDelete;
+    if(indexPath.section == 1) {
+        if(indexPath.row >= [self.kittys count]) {
+            return UITableViewCellEditingStyleInsert;
+        } else {
+            return UITableViewCellEditingStyleDelete;
+        }
     }
+    
+    return UITableViewCellEditingStyleNone;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row < [self.kittys count] && editingStyle == UITableViewCellEditingStyleDelete) {
+    if(indexPath.section == 1 && indexPath.row < [self.kittys count] && editingStyle == UITableViewCellEditingStyleDelete) {
         [[KCKittyManager sharedKittyManager] removeKittyAtIndex:indexPath.row];
         
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -100,5 +127,27 @@ static NSString *KittyCellIdentifier = @"KittyCell";
     }
 }
 
+#pragma mark - UITextField Delegates
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warnung" message:@"Wenn Sie die URL ändern, werden alle gespeicherten Kitties entfernt und der ausgewählte Benutzer wird zurückgesetzt. Sind Sie sich sicher, dass Sie die URL ändern möchten?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ändern", nil];
+    [alert show];
+    
+    return YES;
+}
+
+#pragma mark - UIAlertView Delegates
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if(buttonIndex != alertView.cancelButtonIndex) {
+        [[KCKittyManager sharedKittyManager] setSelectedKittyID:nil andUserID:nil];
+        [[KCKittyManager sharedKittyManager] removeAllKitties];
+        
+        KCTextFieldCell *textFieldCell = (KCTextFieldCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        [[KCKittyManager sharedKittyManager] setServerBaseURL:textFieldCell.textField.text];
+        
+        [self.tableView reloadData];
+    }
+}
 
 @end
