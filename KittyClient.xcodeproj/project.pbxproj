@@ -10,6 +10,7 @@
 		CA051B5C18035F4000EAF584 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA051B5B18035F4000EAF584 /* SessionManager.m */; };
 		CA2772C217F9AC0E0021E507 /* KCKittyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2772C117F9AC0E0021E507 /* KCKittyManager.m */; };
 		CA30C0C6183D1E1B0037EE3A /* KCTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA30C0C5183D1E1B0037EE3A /* KCTextFieldCell.m */; };
+		CA30C0F8183D3B410037EE3A /* KCKittyClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA30C0F7183D3B410037EE3A /* KCKittyClientTests.m */; };
 		CAA5E59C17F9D18D0071D08B /* KCKittyUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */; };
 		CAB89C7818053AE400C75632 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C7718053AE400C75632 /* MBProgressHUD.m */; };
 		CAB89C8C18053AF100C75632 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C7A18053AF100C75632 /* AFHTTPRequestOperation.m */; };
@@ -61,6 +62,7 @@
 		CA2772C117F9AC0E0021E507 /* KCKittyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyManager.m; sourceTree = "<group>"; };
 		CA30C0C4183D1E1B0037EE3A /* KCTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCTextFieldCell.h; sourceTree = "<group>"; };
 		CA30C0C5183D1E1B0037EE3A /* KCTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTextFieldCell.m; sourceTree = "<group>"; };
+		CA30C0F7183D3B410037EE3A /* KCKittyClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyClientTests.m; sourceTree = "<group>"; };
 		CA74265B1805B6700099ABC5 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserCell.h; sourceTree = "<group>"; };
 		CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserCell.m; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				F494D20417F3692700B7F1CA /* Supporting Files */,
+				CA30C0F7183D3B410037EE3A /* KCKittyClientTests.m */,
 			);
 			path = KittyClientTests;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA30C0F8183D3B410037EE3A /* KCKittyClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
