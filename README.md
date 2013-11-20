@@ -39,6 +39,9 @@ Works with:
 
 May also work with previous Xcode and iOS SDK versions.
 
+## Credits
+Thanks to Simon Jakubowski for writing pyKitty! :)
+
 ## License (MIT License)
 Copyright (c) 2013 Roland Moers
 
