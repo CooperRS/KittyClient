@@ -38,7 +38,6 @@
 		F494D1FE17F3692700B7F1CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1FD17F3692700B7F1CA /* XCTest.framework */; };
 		F494D1FF17F3692700B7F1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1DE17F3692700B7F1CA /* Foundation.framework */; };
 		F494D20017F3692700B7F1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F494D1E217F3692700B7F1CA /* UIKit.framework */; };
-		F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F494D20917F3692700B7F1CA /* KittyClientTests.m */; };
 		F4A0CCDD17F5D1B000E8FB53 /* KCKittyUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */; };
 		F4A0CCF417F6252700E8FB53 /* KCKittyDrinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF317F6252700E8FB53 /* KCKittyDrinkTableViewController.m */; };
 		F4A0CCF717F6258C00E8FB53 /* KCKittyDrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A0CCF617F6258C00E8FB53 /* KCKittyDrinkCell.m */; };
@@ -108,7 +107,6 @@
 		F494D1FC17F3692700B7F1CA /* KittyClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittyClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494D1FD17F3692700B7F1CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F494D20517F3692700B7F1CA /* KittyClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KittyClientTests-Info.plist"; sourceTree = "<group>"; };
-		F494D20917F3692700B7F1CA /* KittyClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KittyClientTests.m; sourceTree = "<group>"; };
 		F4A0CCDB17F5D1B000E8FB53 /* KCKittyUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserTableViewController.h; sourceTree = "<group>"; };
 		F4A0CCDC17F5D1B000E8FB53 /* KCKittyUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserTableViewController.m; sourceTree = "<group>"; };
 		F4A0CCF217F6252700E8FB53 /* KCKittyDrinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyDrinkTableViewController.h; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 		F494D20317F3692700B7F1CA /* KittyClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				F494D20917F3692700B7F1CA /* KittyClientTests.m */,
 				F494D20417F3692700B7F1CA /* Supporting Files */,
 			);
 			path = KittyClientTests;
@@ -432,7 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F494D20A17F3692700B7F1CA /* KittyClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
