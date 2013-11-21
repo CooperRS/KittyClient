@@ -79,8 +79,6 @@ static NSString *AddKittyCellIdentifier = @"AddCell";
 static NSString *KittyCellIdentifier = @"KittyCell";
 static NSString *URLCellIdentifier = @"URLCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Path: %i, %i", indexPath.section, indexPath.row);
-    
     if(indexPath.section == 1) {
         if(indexPath.row >= [self.kittys count]) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddKittyCellIdentifier forIndexPath:indexPath];
