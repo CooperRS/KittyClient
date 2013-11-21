@@ -43,7 +43,7 @@
     NSString *enteredKittyID = self.textField.text;
     for(NSDictionary *aKitty in [KCKittyManager sharedKittyManager].kitties) {
         if([[enteredKittyID capitalizedString] isEqualToString:[aKitty[@"kittyId"] capitalizedString]]) {
-            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit dieser ID wurde bereits hinzugefügt. Bitte eine andere ID eingeben." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"Another Kitty with the same ID has already been added. Please enter another ID.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [theAlert show];
             
             return;
@@ -51,7 +51,7 @@
     }
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Laden..";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"kitty", enteredKittyID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -67,7 +67,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit der eingegebenen ID konnte nicht gefunden werden. Bitte die eingegebene ID überprüfen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"A kitty with the entered ID could not be found. Please enter another ID", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];

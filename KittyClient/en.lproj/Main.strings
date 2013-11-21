@@ -1,0 +1,54 @@
+
+/* Class = "IBUILabel"; text = "(0,85 EUR)"; ObjectID = "1EV-Jl-UO4"; */
+"1EV-Jl-UO4.text" = "(0,85 EUR)";
+
+/* Class = "IBUIBarButtonItem"; title = "Blitz an"; ObjectID = "Fwr-qd-xLf"; */
+"Fwr-qd-xLf.title" = "Flash on";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "Hqj-KT-ONe"; */
+"Hqj-KT-ONe.text" = "Name";
+
+/* Class = "IBUILabel"; text = "0,50€"; ObjectID = "QQ6-aC-uEY"; */
+"QQ6-aC-uEY.text" = "0,50 EUR";
+
+/* Class = "IBUILabel"; text = "12"; ObjectID = "SRr-LM-Wyw"; */
+"SRr-LM-Wyw.text" = "12";
+
+/* Class = "IBUILabel"; text = "Creator"; ObjectID = "VmJ-Op-TeN"; */
+"VmJ-Op-TeN.text" = "Creator";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "WrY-5h-YPi"; */
+"WrY-5h-YPi.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "Einstellungen"; ObjectID = "WvX-P3-1x1"; */
+"WvX-P3-1x1.title" = "Settings";
+
+/* Class = "IBUINavigationItem"; title = "Kitty Name"; ObjectID = "a2D-eg-N1i"; */
+"a2D-eg-N1i.title" = "Kitty Name";
+
+/* Class = "IBUILabel"; text = "Hinzufügen"; ObjectID = "aNI-5A-jaS"; */
+"aNI-5A-jaS.text" = "Add";
+
+/* Class = "IBUINavigationItem"; title = "Kitty hinzufügen"; ObjectID = "b0U-gH-hgk"; */
+"b0U-gH-hgk.title" = "Add Kitty";
+
+/* Class = "IBUILabel"; text = "Server URL"; ObjectID = "jJ0-Wt-mQF"; */
+"jJ0-Wt-mQF.text" = "Server URL";
+
+/* Class = "IBUINavigationItem"; title = "Scanner"; ObjectID = "kF4-ED-6zV"; */
+"kF4-ED-6zV.title" = "Scanner";
+
+/* Class = "IBUILabel"; text = "0,33l Fritz Kola"; ObjectID = "nF3-gS-vGU"; */
+"nF3-gS-vGU.text" = "0,33l Fritz Kola";
+
+/* Class = "IBUINavigationItem"; title = "Kittys"; ObjectID = "nav-RZ-AfD"; */
+"nav-RZ-AfD.title" = "Kittys";
+
+/* Class = "IBUILabel"; text = "Hinzufügen"; ObjectID = "pIi-SE-Xde"; */
+"pIi-SE-Xde.text" = "Add";
+
+/* Class = "IBUINavigationItem"; title = "Name (12 EUR)"; ObjectID = "tfw-YV-n5a"; */
+"tfw-YV-n5a.title" = "Name (12 EUR)";
+
+/* Class = "IBUILabel"; text = "Kitty ID"; ObjectID = "xd9-gE-Itv"; */
+"xd9-gE-Itv.text" = "Kitty ID";

@@ -23,6 +23,7 @@
 		CAB89C9318053AF100C75632 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C8918053AF100C75632 /* AFURLResponseSerialization.m */; };
 		CAB89C9418053AF100C75632 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB89C8B18053AF100C75632 /* AFURLSessionManager.m */; };
 		CABCD0B31805B610005E17AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABCD0B11805B610005E17AD /* Main.storyboard */; };
+		CAEA9183183E39A0002E43E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAEA9185183E39A0002E43E3 /* Localizable.strings */; };
 		F48A671017F377ED00E5C76F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A670F17F377ED00E5C76F /* AVFoundation.framework */; };
 		F48A671217F377F600E5C76F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671117F377F600E5C76F /* CoreMedia.framework */; };
 		F48A671417F377FE00E5C76F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A671317F377FE00E5C76F /* CoreVideo.framework */; };
@@ -63,7 +64,6 @@
 		CA30C0C4183D1E1B0037EE3A /* KCTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCTextFieldCell.h; sourceTree = "<group>"; };
 		CA30C0C5183D1E1B0037EE3A /* KCTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTextFieldCell.m; sourceTree = "<group>"; };
 		CA30C0F7183D3B410037EE3A /* KCKittyClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyClientTests.m; sourceTree = "<group>"; };
-		CA74265B1805B6700099ABC5 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAA5E59A17F9D18D0071D08B /* KCKittyUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKittyUserCell.h; sourceTree = "<group>"; };
 		CAA5E59B17F9D18D0071D08B /* KCKittyUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKittyUserCell.m; sourceTree = "<group>"; };
 		CAB89C7618053AE400C75632 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = External/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
@@ -87,6 +87,11 @@
 		CAB89C8918053AF100C75632 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = External/AFNetworking/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		CAB89C8A18053AF100C75632 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = External/AFNetworking/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		CAB89C8B18053AF100C75632 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = External/AFNetworking/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		CAEA917D183D6740002E43E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAEA917F183D674E002E43E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		CAEA9180183D675B002E43E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CAEA9186183E39A3002E43E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAEA9187183E39A4002E43E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F48A670F17F377ED00E5C76F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F48A671117F377F600E5C76F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F48A671317F377FE00E5C76F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -224,6 +229,16 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		CAEA9188183E39B6002E43E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CABCD0B11805B610005E17AD /* Main.storyboard */,
+				CAEA9185183E39A0002E43E3 /* Localizable.strings */,
+				F494D1F617F3692700B7F1CA /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F494D1D217F3692700B7F1CA = {
 			isa = PBXGroup;
 			children = (
@@ -267,10 +282,9 @@
 				CA2772BD17F9AABF0021E507 /* Main */,
 				CA2772BE17F9AAC30021E507 /* Settings */,
 				CA2772BF17F9ABFF0021E507 /* Datamodel */,
-				CABCD0B11805B610005E17AD /* Main.storyboard */,
 				F494D1ED17F3692700B7F1CA /* KCAppDelegate.h */,
 				F494D1EE17F3692700B7F1CA /* KCAppDelegate.m */,
-				F494D1F617F3692700B7F1CA /* Images.xcassets */,
+				CAEA9188183E39B6002E43E3 /* Resources */,
 				F494D1E517F3692700B7F1CA /* Supporting Files */,
 			);
 			path = KittyClient;
@@ -349,7 +363,7 @@
 			attributes = {
 				CLASSPREFIX = KC;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Simon Jakubowski";
+				ORGANIZATIONNAME = "Roland Moers";
 				TargetAttributes = {
 					F494D1DA17F3692700B7F1CA = {
 						DevelopmentTeam = 8YAZYUUSD3;
@@ -385,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F494D1F717F3692700B7F1CA /* Images.xcassets in Resources */,
+				CAEA9183183E39A0002E43E3 /* Localizable.strings in Resources */,
 				CABCD0B31805B610005E17AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,9 +465,20 @@
 		CABCD0B11805B610005E17AD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CA74265B1805B6700099ABC5 /* de */,
+				CAEA917D183D6740002E43E3 /* Base */,
+				CAEA917F183D674E002E43E3 /* de */,
+				CAEA9180183D675B002E43E3 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAEA9185183E39A0002E43E3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAEA9186183E39A3002E43E3 /* de */,
+				CAEA9187183E39A4002E43E3 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

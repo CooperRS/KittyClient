@@ -98,7 +98,7 @@
         }
         
         [self.sessionManager.captureSession commitConfiguration];
-        [sender setTitle:@"Blitz aus"];
+        [sender setTitle:NSLocalizedString(@"Flash off", nil)];
     } else {
         [self.sessionManager.captureSession beginConfiguration];
         if([self.sessionManager.videoDevice lockForConfiguration:nil]) {
@@ -108,7 +108,7 @@
         }
         
         [self.sessionManager.captureSession commitConfiguration];
-        [sender setTitle:@"Blitz an"];
+        [sender setTitle:NSLocalizedString(@"Flash on", nil)];
     }
 }
 
@@ -123,7 +123,7 @@
     NSString *enteredKittyID = [[anURL absoluteString] substringFromIndex:8];
     for(NSDictionary *aKitty in [KCKittyManager sharedKittyManager].kitties) {
         if([[enteredKittyID capitalizedString] isEqualToString:[aKitty[@"kittyId"] capitalizedString]]) {
-            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit dieser ID wurde bereits hinzugefügt. Sie ist unter den Einstellungen zu finden." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"Another Kitty with the same ID has already been added. You can find it in the settings.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [theAlert show];
             
             return;
@@ -131,7 +131,7 @@
     }
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Laden..";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"kitty", enteredKittyID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -144,13 +144,13 @@
         
         [[KCKittyManager sharedKittyManager] addKitty:responseObject];
         
-        NSString *message = [NSString stringWithFormat:@"Die Kitty \"%@\" wurde erfolgreich hinzugefügt. Sie können nun unter Einstellungen einen User auswählen.", responseObject[@"name"]];
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The kitty \"%@\" has been added successfully. You can now choose an user in the settings.", nil), responseObject[@"name"]];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Eine Kitty mit der eingegebenen ID konnte nicht gefunden werden. Bitte die eingegebene ID überprüfen." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"A kitty with the scanned ID could not be found. Please check your server URL.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
@@ -164,7 +164,7 @@
     self.canRecognizeCodes = NO;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Laden..";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"users", [KCKittyManager sharedKittyManager].selectedKittyID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -192,7 +192,7 @@
                             
                             self.currentUserItem = aUserItem;
                             
-                            UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Wollen Sie das folgende Getränk kaufen?\n\n%@\nEAN: %@\nKosten: %.2f €\n\nBenutzer: %@\nKontostand: %.2f €", [aUserItem objectForKey:@"itemName"], eanCode, [aUserItem[@"itemPrice"] doubleValue], aUser[@"name"], [aUser[@"money"] doubleValue]] delegate:self cancelButtonTitle:@"Abbrechen" destructiveButtonTitle:nil otherButtonTitles:@"Kaufen", nil];
+                            UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Do you want to buy the following drink?˜n\n%@\nEAN: %@\nPrice: %.2f €\n\nUser: %@\nBalance: %.2f €", nil), [aUserItem objectForKey:@"itemName"], eanCode, [aUserItem[@"itemPrice"] doubleValue], aUser[@"name"], [aUser[@"money"] doubleValue]] delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Buy", nil), nil];
                             [sheet showInView:self.view];
                             
                             foundEAN = YES;
@@ -201,13 +201,13 @@
                     }
                     
                     if(!foundEAN) {
-                        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Dieses Getränk ist in der ausgewählten Kitty unbekannt." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)  message:NSLocalizedString(@"The scanned drink is unknown in the chosen kitty.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                         [theAlert show];
                     }
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                     [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
                     
-                    UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der verfügbaren Getränke ist ein Fehler passiert. Ist unter den Einstellungen eine Kitty und ein Benutzer ausgewählt?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"An error occured while loading the available drinks. Did you choose a kitty and a user in settings?", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                     [theAlert show];
                 }];
                 [[NSOperationQueue mainQueue] addOperation:op];
@@ -218,13 +218,13 @@
         }
         
         if(!foundUser) {
-            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Der ausgewählte Benutzer ist in der ausgewählten Kitty unbekannt." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)  message:NSLocalizedString(@"The chosen user is not registered in the chosen kitty.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [theAlert show];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der verfügbaren Getränke ist ein Fehler passiert. Ist unter den Einstellungen eine Kitty und ein Benutzer ausgewählt?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"An error occured while loading the available users. Did you choose a kitty in settings?", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
@@ -250,7 +250,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if(buttonIndex != [actionSheet cancelButtonIndex]) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        hud.labelText = @"Laden..";
+        hud.labelText = NSLocalizedString(@"Loading...", nil);
         
         NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"incItem", [self.currentUserItem objectForKey:@"itemId"]]];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -262,13 +262,13 @@
             
             [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
             
-            NSString *message = [NSString stringWithFormat:@"Das Getränk wurde erfolgreich gekauft. Ihr neuer Kontostand beträgt nun %.2f €.\nViel Spaß damit!", [responseObject[@"userMoney"] doubleValue]];
-            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Erfolg" message:message delegate:self cancelButtonTitle:@"Danke" otherButtonTitles:nil];
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The drinks has been bought successfully. Your new Balance is %.2f. Have fun with it!", nil), [responseObject[@"userMoney"] doubleValue]];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"Thanks", nil) otherButtonTitles:nil];
             [theAlert show];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
             
-            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Beim Kaufen des Getränkes ist ein Fehler passiert. Bitte erneut versuchen." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)  message:NSLocalizedString(@"An error occured while buying the drink. Please try again.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [theAlert show];
         }];
         [[NSOperationQueue mainQueue] addOperation:op];

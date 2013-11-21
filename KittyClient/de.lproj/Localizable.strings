@@ -1,0 +1,50 @@
+/* 
+  Localizable.strings
+  KittyClient
+
+  Created by Roland Moers on 21.11.13.
+  Copyright (c) 2013 Roland Moers. All rights reserved.
+*/
+
+"Flash off" = "Blitz aus";
+"Flash on" = "Blitz an";
+
+"Error" = "Fehler";
+"Warning" = "Arnung";
+"Success" = "Erfolg";
+"OK" = "OK";
+"Cancel" = "Abbrechen";
+"Buy" = "Kaufen";
+"Thanks" = "Danke";
+"Change" = "Ändern";
+"Loading..." = "Laden...";
+
+"Another Kitty with the same ID has already been added. You can find it in the settings." = "Eine Kitty mit dieser ID wurde bereits hinzugefügt. Sie ist unter den Einstellungen zu finden.";
+"The kitty \"%@\" has been added successfully. You can now choose an user in the settings." = "Die Kitty \"%@\" wurde erfolgreich hinzugefügt. Sie können nun in den Einstellungen einen Benutzer auswählen.";
+"A kitty with the scanned ID could not be found. Please check your server URL." = "Eine Kitty mit der gescannten ID konnte nicht gefunden werden. Bitte überprüfen Sie die Server URL.";
+"Do you want to buy the following drink?˜n\n%@\nEAN: %@\nPrice: %.2f €\n\nUser: %@\nBalance: %.2f €" = "Wollen Sie das folgende Getränk kaufen?\n\n%@\nEAN: %@\nKosten: %.2f €\n\nBenutzer: %@\nKontostand: %.2f €";
+"The scanned drink is unknown in the chosen kitty." = "Dieses Getränk ist in der ausgewählten Kitty unbekannt.";
+"An error occured while loading the available drinks. Did you choose a kitty and a user in settings?" = "Beim Laden der verfügbaren Getränke ist ein Fehler passiert. Ist unter den Einstellungen eine Kitty und einen Benutzer ausgewählt?";
+"The chosen user is not registered in the chosen kitty." = "Der ausgewählte Benutzer ist in der ausgewählten Kitty unbekannt.";
+"An error occured while loading the available users. Did you choose a kitty in settings?" = "Beim Laden der verfügbaren Benutzer ist ein Fehler passiert. Ist unter den Einstellungen eine Kitty ausgewählt?";
+"The drinks has been bought successfully. Your new Balance is %.2f. Have fun with it!" = "Das Getränk wurde erfolgreich gekauft. Ihr neuer Kontostand beträgt nun %.2f €.\nViel Spaß damit!";
+"An error occured while buying the drink. Please try again." = "Beim Kaufen des Getränkes ist ein Fehler passiert. Bitte erneut versuchen.";
+
+"Saved" = "Gespeichert";
+"Server URL" = "Server URL";
+
+"If you change the server URL, all saved kitties will be deleted and the selected kitty and user will be resetted. Di you want to change the server URL?" = "Wenn Sie die URL ändern, werden alle gespeicherten Kitties entfernt und der ausgewählte Benutzer wird zurückgesetzt. Sind Sie sich sicher, dass Sie die URL ändern möchten?";
+
+"Another Kitty with the same ID has already been added. Please enter another ID." = "Eine Kitty mit dieser ID wurde bereits hinzugefügt. Bitte eine andere ID eingeben.";
+"A kitty with the entered ID could not be found. Please enter another ID" = "Eine Kitty mit der eingegebenen ID konnte nicht gefunden werden. Bitte eine andere ID eingeben.";
+
+"User" = "User";
+
+"An error occured while loading all users. Please try again." = "Beim Laden der Benutzer ist ein Fehler passiert. Bitte erneut versuchen.";
+
+"Drinks" = "Getränke";
+
+"An error occured while loading all drinks. Please try again." = "Beim Laden der Getränke ist ein Fehler passiert. Bitte erneut versuchen.";
+"An error occured while settings the number of bought drinks. Please try again." = "Beim Setzen der Anzahl getrunkener Getränke ist ein Fehler passiert. Bitte erneut versuchen.";
+
+"A kitty with the forwarded ID could not be found. Please check your server URL." = "Eine Kitty mit der weitergeleiteten ID konnte nicht gefunden werden. Bitte die eingegebene ID überprüfen.";

@@ -52,7 +52,7 @@
     [super viewWillAppear:animated];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Laden..";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"userItems", [self.user objectForKey:@"userId"]]];
     //NSLog(@"URL: %@", URL);
@@ -74,7 +74,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Beim Laden der Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"An error occured while loading all drinks. Please try again.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
@@ -100,7 +100,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if(section == 0) {
-        return @"Getränke";
+        return NSLocalizedString(@"Drinks", nil);
     }
     
     return @"";
@@ -130,16 +130,16 @@ static NSString *CellIdentifier = @"DrinkCell";
     if (aCell.stepper.value == 0)
         URL = [NSURL URLWithString:[NSString stringWithFormat:[KCKittyManager sharedKittyManager].serverURL, @"decItem", [NSNumber numberWithInteger:aCell.tag] ]];
     
-    NSLog(@"%@", URL);
+    //NSLog(@"%@", URL);
     NSURLRequest *request = [NSURLRequest requestWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Laden..";
+    hud.labelText = NSLocalizedString(@"Loading...", nil);
     
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
         aCell.itemCount.text = [[responseObject objectForKey:@"itemCount"] stringValue];
@@ -149,7 +149,7 @@ static NSString *CellIdentifier = @"DrinkCell";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Fehler"  message:@"Beim Setzen der Anzahl getrunkener Getränke ist ein Fehler passiert. Bitte erneut versuchen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)  message:NSLocalizedString(@"An error occured while settings the number of bought drinks. Please try again.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [theAlert show];
     }];
     [[NSOperationQueue mainQueue] addOperation:op];

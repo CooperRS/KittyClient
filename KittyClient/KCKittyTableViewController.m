@@ -67,9 +67,9 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 1) {
-        return @"Gespeichert";
+        return NSLocalizedString(@"Saved", nil);
     } else if (section == 0) {
-        return @"Server URL";
+        return NSLocalizedString(@"Server URL", nil);
     }
     
     return @"";
@@ -79,6 +79,8 @@ static NSString *AddKittyCellIdentifier = @"AddCell";
 static NSString *KittyCellIdentifier = @"KittyCell";
 static NSString *URLCellIdentifier = @"URLCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Path: %i, %i", indexPath.section, indexPath.row);
+    
     if(indexPath.section == 1) {
         if(indexPath.row >= [self.kittys count]) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddKittyCellIdentifier forIndexPath:indexPath];
@@ -149,7 +151,7 @@ static NSString *URLCellIdentifier = @"URLCell";
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warnung" message:@"Wenn Sie die URL ändern, werden alle gespeicherten Kitties entfernt und der ausgewählte Benutzer wird zurückgesetzt. Sind Sie sich sicher, dass Sie die URL ändern möchten?" delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ändern", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"If you change the server URL, all saved kitties will be deleted and the selected kitty and user will be resetted. Di you want to change the server URL?", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"Change", nil), nil];
     [alert show];
     
     return YES;

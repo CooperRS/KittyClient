@@ -1,0 +1,50 @@
+/* 
+  Localizable.strings
+  KittyClient
+
+  Created by Roland Moers on 21.11.13.
+  Copyright (c) 2013 Roland Moers. All rights reserved.
+*/
+
+"Flash off" = "Flash off";
+"Flash on" = "Flash on";
+
+"Error" = "Error";
+"Warning" = "Warning";
+"Success" = "Success";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Buy" = "Buy";
+"Thanks" = "Thanks";
+"Change" = "Change";
+"Loading..." = "Loading...";
+
+"Another Kitty with the same ID has already been added. You can find it in the settings." = "Another Kitty with the same ID has already been added. You can find it in the settings.";
+"The kitty \"%@\" has been added successfully. You can now choose an user in the settings." = "The kitty \"%@\" has been added successfully. You can now choose an user in the settings.";
+"A kitty with the scanned ID could not be found. Please check your server URL." = "A kitty with the scanned ID could not be found. Please check your server URL.";
+"Do you want to buy the following drink?˜n\n%@\nEAN: %@\nPrice: %.2f €\n\nUser: %@\nBalance: %.2f €" = "Do you want to buy the following drink?˜n\n%@\nEAN: %@\nPrice: %.2f €\n\nUser: %@\nBalance: %.2f €";
+"The scanned drink is unknown in the chosen kitty." = "The scanned drink is unknown in the chosen kitty.";
+"An error occured while loading the available drinks. Did you choose a kitty and a user in settings?" = "An error occured while loading the available drinks. Did you choose a kitty and a user in settings?";
+"The chosen user is not registered in the chosen kitty." = "The chosen user is not registered in the chosen kitty.";
+"An error occured while loading the available users. Did you choose a kitty in settings?" = "An error occured while loading the available users. Did you choose a kitty in settings?";
+"The drinks has been bought successfully. Your new Balance is %.2f. Have fun with it!" = "The drink has been bought successfully. Your new Balance is %.2f. Have fun with it!";
+"An error occured while buying the drink. Please try again." = "An error occured while buying the drink. Please try again.";
+
+"Saved" = "Saved";
+"Server URL" = "Server URL";
+
+"If you change the server URL, all saved kitties will be deleted and the selected kitty and user will be resetted. Di you want to change the server URL?" = "If you change the server URL, all saved kitties will be deleted and the selected kitty and user will be resetted. Do you want to change the server URL?";
+
+"Another Kitty with the same ID has already been added. Please enter another ID." = "Another Kitty with the same ID has already been added. Please enter another ID.";
+"A kitty with the entered ID could not be found. Please enter another ID" = "A kitty with the entered ID could not be found. Please enter another ID";
+
+"User" = "Benutzer";
+
+"An error occured while loading all users. Please try again." = "An error occured while loading all users. Please try again.";
+
+"Drinks" = "Drinks";
+
+"An error occured while loading all drinks. Please try again." = "An error occured while loading all drinks. Please try again.";
+"An error occured while settings the number of bought drinks. Please try again." = "An error occured while settings the number of bought drinks. Please try again.";
+
+"A kitty with the forwarded ID could not be found. Please check your server URL." = "A kitty with the forwarded ID could not be found. Please check your server URL.";
